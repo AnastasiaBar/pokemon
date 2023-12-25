@@ -1,3 +1,55 @@
+@import "../../scss/mixins/list-reset";
+
 .filter {
   $block-name: &; // #{$block-name}__element
+
+  width: 354px;
+  padding: 8px;
+  background: var(--black-200);
+  border-radius: 24px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    padding: 5px 6px 6px 16px;
+    border-top: 1px solid transparent;
+    border-radius: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__left {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+  }
+
+  &__name {
+    margin: 0;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 115%;
+    letter-spacing: 0.42px;
+  }
+
+  &__number {
+    margin: 0;
+    padding: 7px 8px;
+    color: var(--white);
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: 0.2px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+  }
 }
