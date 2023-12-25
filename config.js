@@ -41,7 +41,7 @@ let config = {
     "sanitize.css/forms.css",
     "sanitize.css/assets.css",
     "sanitize.css/typography.css",
-    "sanitize.css/reduce-motion.css",
+    //"sanitize.css/reduce-motion.css",
     "src/scss/variables.scss",
     "src/scss/reboot.scss",
     // "src/scss/mixins.scss",

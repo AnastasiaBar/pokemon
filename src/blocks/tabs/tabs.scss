@@ -15,21 +15,12 @@
     border-radius: 24px;
   }
 
-  &__left,
-  &__right {
+  &__button {
     width: 100%;
     padding: 16px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.32px;
     border-radius: 16px;
-  }
-
-  &__left {
-    background: var(--grey-200);
-    border-top: 1px solid var(--grey);
-  }
-
-  &__right {
-    background: var(--black-100);
-    border-top: 1px solid var(--grey-200);
   }
 }
