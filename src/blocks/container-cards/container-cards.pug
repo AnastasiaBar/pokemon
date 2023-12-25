@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (container-cards)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт
+//- в сборку
+
+mixin container-cards(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +container-cards('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' container-cards--' + modsList[i].trim();
+      }
+    }
+
+  .container-cards(class=allMods)&attributes(attributes)
+    .container-cards__inner
+      block

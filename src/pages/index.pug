@@ -7,5 +7,12 @@ block variables
   - metaKeywords = 'keywords'
 
 block content
-  .container
-    p test99
+
+  .page
+    .page__tabs
+      +tabs
+    .page__content
+      +filter
+      +container-cards
+    .page__paginator
+      +paginator
