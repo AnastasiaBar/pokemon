@@ -1,3 +1,35 @@
+@import "../../scss/variables";
+
 .tabs {
   $block-name: &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+    background: var(--black-200);
+    border-radius: 24px;
+  }
+
+  &__left,
+  &__right {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    border-radius: 16px;
+  }
+
+  &__left {
+    background: var(--grey-200);
+    border-top: 1px solid var(--grey);
+  }
+
+  &__right {
+    background: var(--black-100);
+    border-top: 1px solid var(--grey-200);
+  }
 }
