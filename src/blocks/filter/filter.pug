@@ -20,6 +20,7 @@ mixin filter(mods)
     }
 
   .filter(class=allMods)&attributes(attributes)
+    .overlay
     .filter__inner
       -
         let filters = [
@@ -127,3 +128,6 @@ mixin filter(mods)
             p.filter__name= item.name
           .filter__right
             p.filter__number= item.number
+      .filter__burger-btn
+        svg.filter__burger-icon
+          use(xlink:href = 'img/svgSprite.svg#icon__filter')

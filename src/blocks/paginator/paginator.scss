@@ -7,7 +7,14 @@
 
   &__inner {
     display: flex;
-    gap: 0 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+
+    @media screen and (min-width: $screen-d) {
+      flex-wrap: nowrap;
+      margin: 0;
+    }
   }
 
   &__btn {
@@ -18,12 +25,26 @@
     height: 40px;
     padding: 0 4px;
     color: var(--white);
-    font-size: 16px;
-    line-height: 150%;
+    font-size: fluid(12, 16, 320, 1680);
+    line-height: fluid(16, 24, 320, 1680);
     text-decoration: none;
     border: 1px solid transparent;
     border-top: 1px solid var(--grey-200);
     border-radius: 8px;
+
+    &:first-child {
+      order: 1;
+      width: calc(50% - 5px);
+
+      @media screen and (min-width: $screen-d) {
+        order: 0;
+      }
+    }
+
+    &:last-child {
+      order: 1;
+      width: calc(50% - 5px);
+    }
 
     &:hover {
       background: var(--grey-300);

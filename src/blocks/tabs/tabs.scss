@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/breakpoints";
 
 .tabs {
   $block-name: &; // #{$block-name}__element
@@ -12,19 +13,30 @@
     width: 100%;
     padding: 8px;
     background: var(--black-200);
-    border-radius: 24px;
+    border-radius: 16px;
+
+    @media screen and (min-width: $screen-d) {
+      border-radius: 24px;
+    }
   }
 
   &__button {
     width: 100%;
-    padding: 16px;
+    padding: 8px 16px;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.32px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
+
+    @media screen and (min-width: $screen-d) {
+      padding: 16px;
+      border-radius: 16px;
+    }
 
     &--disabled {
+      background: var(--black-100);
+      border-top: 1px solid var(--grey-200);
       cursor: not-allowed;
       transition: all 0.3s ease-out;
 

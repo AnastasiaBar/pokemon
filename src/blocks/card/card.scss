@@ -1,14 +1,22 @@
+@import "../../scss/variables";
+@import "../../scss/breakpoints";
+@import "../../scss/mixins/fluid";
+
 .card {
   $block-name: &; // #{$block-name}__element
 
   position: relative;
   width: 100%;
-  padding: 8px 8px 16px;
+  padding: 8px;
   background: var(--grey-300);
   border-top: 1px solid var(--grey-200);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
   transition: all 0.3s ease-out;
+
+  @media screen and (min-width: $screen-d) {
+    padding: 8px 8px 16px;
+  }
 
   &:hover {
     background: var(--grey-200);
@@ -23,22 +31,32 @@
 
   &__number {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 16px;
+    left: 16px;
     color: var(--white);
-    font-size: 12px;
-    line-height: 120%;
+    font-size: fluid(8, 12, 320, 1680);
+    line-height: fluid(8, 14.4, 320, 1680);
+
+    @media screen and (min-width: $screen-d) {
+      top: 20px;
+      left: 20px;
+    }
   }
 
   &__container-photo {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 16px;
     background: var(--black-100);
     border-radius: 8px;
+
+    @media screen and (min-width: $screen-d) {
+      padding: 40px;
+    }
   }
 
   &__photo {
+    width: 100%;
     max-width: 240px;
     max-height: 240px;
     aspect-ratio: 1 / 1;
@@ -46,55 +64,122 @@
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    padding: 16px 8px 24px;
+    padding: 8px 0 16px;
+
+    @media screen and (min-width: $screen-d) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 16px 8px 24px;
+    }
   }
 
   &__name {
+    width: 100%;
     margin: 0;
+    overflow: hidden;
     color: var(--white);
-    font-size: 32px;
-    line-height: 124%;
-    letter-spacing: 0.64px;
+    font-size: fluid(16, 32, 320, 1728);
+    line-height: fluid(19.84, 39.68, 320, 1728);
+    letter-spacing: fluid(0.32, 0.64, 320, 1728);
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+
+    @media screen and (min-width: $screen-d) {
+      width: auto;
+      text-align: left;
+    }
   }
 
   &__type {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
+
+    @media screen and (min-width: $screen-d) {
+      gap: 12px;
+    }
   }
 
   &__icon {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     line-height: 0;
+
+    @media screen and (min-width: $screen-d) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__statistics {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 8px;
+    gap: 4px;
+
+    @media screen and (min-width: $screen-d) {
+      gap: 8px;
+      margin: 0 8px;
+    }
   }
 
   &__container-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding: 7px 12px;
-    border-right: 1px solid var(--grey-200);
+    border-bottom: 1px solid var(--grey-200);
+
+    @media screen and (min-width: $screen-d) {
+      display: block;
+      width: fit-content;
+      border-right: 1px solid var(--grey-200);
+      border-bottom: 0;
+    }
+
+    #{$block-name}:hover & {
+      border-bottom: 1px solid var(--grey);
+
+      @media screen and (min-width: $screen-d) {
+        border-right: 1px solid var(--grey);
+        border-bottom: 0;
+      }
+    }
   }
 
   &__statistics-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: calc(50% - 4px);
     border: 1px solid var(--grey-200);
     border-radius: 8px;
+
+    @media screen and (min-width: $screen-d) {
+      flex-wrap: nowrap;
+    }
+
+    #{$block-name}:hover & {
+      border: 1px solid var(--grey);
+    }
   }
 
   &__statistics-number {
     width: 100%;
     margin: 0;
+    padding: 8px 0;
+    font-size: fluid(8, 16, 320, 1680);
+    line-height: fluid(8, 16, 320, 1680);
+    letter-spacing: fluid(0.4, 0.8, 320, 1680);
     text-align: center;
+
+    @media screen and (min-width: $screen-d) {
+      padding: 0;
+    }
   }
 }
