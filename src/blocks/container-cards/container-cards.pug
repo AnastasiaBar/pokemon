@@ -22,35 +22,100 @@ mixin container-cards(text, mods)
 
   .container-cards(class=allMods)&attributes(attributes)
     .container-cards__inner
-      .card.container-cards__item
-        .card__number 001
-        .card__container-photo
-          img.card__photo(src='img/container-cards__photo-01.png', alt='')
-        .card__info
-          p.card__name Bulbasaur
-          .card__type
-            svg.card__icon
-              use(xlink:href = 'img/svgSprite.svg#icon__poison')
-            svg.card__icon
-              use(xlink:href = 'img/svgSprite.svg#icon__grass')
-        .card__statistics
-          .card__statistics-info
-            .card__container-icon
-              svg.card__icon.card__info-icon
-                use(xlink:href = 'img/svgSprite.svg#icon__health')
-            p.card__statistics-number 45
-          .card__statistics-info
-            .card__container-icon
-              svg.card__icon.card__info-icon
-                use(xlink:href = 'img/svgSprite.svg#icon__speed')
-            p.card__statistics-number 45
-          .card__statistics-info
-            .card__container-icon
-              svg.card__icon.card__info-icon
-                use(xlink:href = 'img/svgSprite.svg#icon__attack')
-            p.card__statistics-number 49 / 65
-          .card__statistics-info
-            .card__container-icon
-              svg.card__icon.card__info-icon
-                use(xlink:href = 'img/svgSprite.svg#icon__defence')
-            p.card__statistics-number 49 / 65
+
+      -
+        let pokemonInfo = [
+          {
+            name: 'Bulbasaur',
+            photo: 'img/container-cards__photo-01.png',
+            number: '001',
+            type: ['icon__poison', 'icon__grass'],
+            health: '45',
+            speed: '45',
+            attack: '49 / 65',
+            defence: '49 / 65'
+          },
+          {
+            name: 'Ivysaur',
+            photo: 'img/container-cards__photo-02.png',
+            number: '002',
+            type: ['icon__poison', 'icon__grass'],
+            health: '60',
+            speed: '60',
+            attack: '62 / 80',
+            defence: '63 / 80'
+          },
+          {
+            name: 'Venusaur',
+            photo: 'img/container-cards__photo-03.png',
+            number: '003',
+            type: ['icon__poison', 'icon__grass'],
+            health: '80',
+            speed: '80',
+            attack: '82 / 100',
+            defence: '83 / 100'
+          },
+          {
+            name: 'Charmander',
+            photo: 'img/container-cards__photo-04.png',
+            number: '004',
+            type: ['icon__fire'],
+            health: '39',
+            speed: '65',
+            attack: '52 / 60',
+            defence: '43 / 50'
+          },
+          {
+            name: 'Charmeleon',
+            photo: 'img/container-cards__photo-05.png',
+            number: '005',
+            type: ['icon__fire'],
+            health: '58',
+            speed: '80',
+            attack: '64 / 80',
+            defence: '58 / 65'
+          },
+          {
+            name: 'Charizard',
+            photo: 'img/container-cards__photo-06.png',
+            number: '006',
+            type: ['icon__fire'],
+            health: '78',
+            speed: '100',
+            attack: '64 / 109',
+            defence: '78 / 85'
+          }
+        ]
+
+      each pokemon in pokemonInfo
+        .card.container-cards__item
+          .card__number= pokemon.number
+          .card__container-photo
+            img.card__photo(src= pokemon.photo, alt='')
+          .card__info
+            p.card__name= pokemon.name
+            .card__type
+              each iconType in pokemon.type
+                svg.card__icon
+                  use(xlink:href = 'img/svgSprite.svg#' + iconType)
+          .card__statistics
+            .card__statistics-info
+              .card__container-icon
+                svg.card__icon.card__info-icon
+                  use(xlink:href = 'img/svgSprite.svg#icon__health')
+              p.card__statistics-number= pokemon.health
+            .card__statistics-info
+              .card__container-icon
+                svg.card__icon.card__info-icon
+                  use(xlink:href = 'img/svgSprite.svg#icon__speed')
+              p.card__statistics-number= pokemon.speed
+            .card__statistics-info
+              .card__container-icon
+                svg.card__icon.card__info-icon
+                  use(xlink:href = 'img/svgSprite.svg#icon__attack')
+              p.card__statistics-number= pokemon.attack
+            .card__statistics-info
+              .card__container-icon
+                svg.card__icon.card__info-icon
+                  use(xlink:href = 'img/svgSprite.svg#icon__defence')
+              p.card__statistics-number= pokemon.defence
