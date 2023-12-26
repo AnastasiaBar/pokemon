@@ -3,7 +3,8 @@
 .container-cards {
   $block-name: &; // #{$block-name}__element
 
-  width: calc(100% - 354px - 24px);
+  grid-column: 4/span 9;
+  grid-template-columns: repeat(4, 1fr);
   padding: 8px;
   background: var(--black-200);
   border-radius: 24px;
