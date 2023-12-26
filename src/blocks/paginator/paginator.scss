@@ -1,3 +1,39 @@
 .paginator {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px;
+  background: var(--black-200);
+  border-radius: 16px;
+
+  &__inner {
+    display: flex;
+    gap: 0 8px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 4px;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-top: 1px solid var(--grey-200);
+    border-radius: 8px;
+
+    &:hover {
+      background: var(--grey-300);
+      border: 1px solid var(--color-blue-300);
+    }
+
+    &--active {
+      background: var(--grey-200);
+      border-top: 1px solid var(--grey);
+    }
+  }
   $block-name: &; // #{$block-name}__element
 }

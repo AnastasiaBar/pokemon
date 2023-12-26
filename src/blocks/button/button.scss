@@ -4,7 +4,6 @@
   display: inline-flex;
   justify-content: center;
   box-sizing: border-box;
-  width: 100%;
   transition: all 0.3s ease-out;
 
   &:hover {
@@ -16,6 +15,11 @@
 
   &--default {
     background: var(--black-100);
+    border-top: 1px solid var(--grey-200);
+  }
+
+  &--default-paginator {
+    background: var(--grey-300);
     border-top: 1px solid var(--grey-200);
   }
 
