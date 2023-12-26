@@ -11,6 +11,6 @@
   margin: 0 auto;
 
   @media screen and (min-width: $screen-dxl) {
-    max-width: 1728px;
+    max-width: calc(1728px - $padding-desktop * 2);
   }
 }
