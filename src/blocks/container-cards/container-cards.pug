@@ -22,4 +22,35 @@ mixin container-cards(text, mods)
 
   .container-cards(class=allMods)&attributes(attributes)
     .container-cards__inner
-      block
+      .card.container-cards__item
+        .card__number 001
+        .card__container-photo
+          img.card__photo(src='img/container-cards__photo-01.png', alt='')
+        .card__info
+          p.card__name Bulbasaur
+          .card__type
+            svg.card__icon
+              use(xlink:href = 'img/svgSprite.svg#icon__poison')
+            svg.card__icon
+              use(xlink:href = 'img/svgSprite.svg#icon__grass')
+        .card__statistics
+          .card__statistics-info
+            .card__container-icon
+              svg.card__icon.card__info-icon
+                use(xlink:href = 'img/svgSprite.svg#icon__health')
+            p.card__statistics-number 45
+          .card__statistics-info
+            .card__container-icon
+              svg.card__icon.card__info-icon
+                use(xlink:href = 'img/svgSprite.svg#icon__speed')
+            p.card__statistics-number 45
+          .card__statistics-info
+            .card__container-icon
+              svg.card__icon.card__info-icon
+                use(xlink:href = 'img/svgSprite.svg#icon__attack')
+            p.card__statistics-number 49 / 65
+          .card__statistics-info
+            .card__container-icon
+              svg.card__icon.card__info-icon
+                use(xlink:href = 'img/svgSprite.svg#icon__defence')
+            p.card__statistics-number 49 / 65
