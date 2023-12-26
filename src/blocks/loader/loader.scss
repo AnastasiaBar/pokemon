@@ -1,0 +1,60 @@
+.loader {
+  $block-name: &; // #{$block-name}__element
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--grey-300);
+  border-radius: 16px;
+  box-shadow: var(--shadow-button);
+
+  &--active {
+    display: flex;
+    height: 480px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 8px;
+    height: 8px;
+    background: var(--white);
+    border-radius: 50%;
+    animation: scale-dot 2s ease-out infinite;
+
+    &:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+  }
+
+  @keyframes scale-dot {
+    0% {
+      transform: scale(0.5);
+    }
+
+    15% {
+      transform: scale(1);
+    }
+
+    20% {
+      transform: scale(1);
+    }
+
+    80% {
+      transform: scale(0.5);
+    }
+
+    100% {
+      transform: scale(0.5);
+    }
+  }
+}
