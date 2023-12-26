@@ -5,10 +5,13 @@
 
   grid-column: 1/span 3;
   grid-template-columns: repeat(4, 1fr);
-  width: calc(100% - 24px);
-  padding: 8px;
-  background: var(--black-200);
-  border-radius: 24px;
+
+  &__inner {
+    width: calc(100% - 24px);
+    padding: 8px;
+    background: var(--black-200);
+    border-radius: 24px;
+  }
 
   &__item {
     display: flex;
