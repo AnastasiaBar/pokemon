@@ -1,0 +1,29 @@
+//- Все примеси в этом файле должны начинаться c имени блока (per-page)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт
+//- в сборку
+
+mixin per-page(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +per-page('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' per-page--' + modsList[i].trim();
+      }
+    }
+
+  .per-page(class=allMods)&attributes(attributes)
+    .per-page__inner
+      .per-page__left Per page:
+      .per-page__right
+        .per-page__item.button.button--active 12
+        .per-page__item.button.button--default 24
+        .per-page__item.button.button--default 48

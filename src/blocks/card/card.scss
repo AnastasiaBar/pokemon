@@ -34,8 +34,8 @@
     top: 16px;
     left: 16px;
     color: var(--white);
-    font-size: fluid(8, 12, 320, 1680);
-    line-height: fluid(8, 14.4, 320, 1680);
+    font-size: fluid(8, 12, 320, 1728);
+    line-height: fluid(8, 14.4, 320, 1728);
 
     @media screen and (min-width: $screen-d) {
       top: 20px;
@@ -173,9 +173,9 @@
     width: 100%;
     margin: 0;
     padding: 8px 0;
-    font-size: fluid(8, 16, 320, 1680);
-    line-height: fluid(8, 16, 320, 1680);
-    letter-spacing: fluid(0.4, 0.8, 320, 1680);
+    font-size: fluid(8, 16, 320, 1728);
+    line-height: fluid(8, 16, 320, 1728);
+    letter-spacing: fluid(0.4, 0.8, 320, 1728);
     text-align: center;
 
     @media screen and (min-width: $screen-d) {

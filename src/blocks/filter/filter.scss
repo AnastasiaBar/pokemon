@@ -4,31 +4,6 @@
 .filter {
   $block-name: &; // #{$block-name}__element
 
-  position: fixed;
-  top: 0;
-  left: -300px;
-  z-index: 1000;
-  max-height: 100vh;
-  padding: 8px;
-  overflow-y: auto;
-  background: var(--grey-300);
-  transition: 0.3s ease-out;
-
-  @media screen and (min-width: $screen-d) {
-    position: static;
-    grid-column: 1/span 3;
-    grid-template-columns: repeat(4, 1fr);
-    max-height: fit-content;
-    padding: 0;
-    overflow-y: hidden;
-    background: none;
-  }
-
-  [data-state="mobile-menu"] & {
-    left: 0;
-    transition: 0.3s ease-out;
-  }
-
   &__inner {
     position: relative;
     z-index: 100;
