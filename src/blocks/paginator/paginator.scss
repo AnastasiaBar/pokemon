@@ -21,8 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    height: 40px;
+    min-width: 32px;
+    height: 32px;
     padding: 0 4px;
     color: var(--white);
     font-size: fluid(12, 16, 320, 1680);
@@ -31,6 +31,11 @@
     border: 1px solid transparent;
     border-top: 1px solid var(--grey-200);
     border-radius: 8px;
+
+    @media screen and (min-width: $screen-d) {
+      min-width: 40px;
+      height: 40px;
+    }
 
     &:first-child {
       order: 1;
