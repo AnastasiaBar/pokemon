@@ -127,4 +127,4 @@ mixin filter(mods)
               use(xlink:href = 'img/svgSprite.svg#' + item.icon)
             p.filter__name= item.name
           .filter__right
-            p.filter__number= item.number
+            p.filter__number.button__number(class= (index === 0 ? "filter__number--active" : ''))= item.number

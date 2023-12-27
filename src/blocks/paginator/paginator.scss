@@ -3,6 +3,8 @@
 @import "../../scss/mixins/fluid";
 
 .paginator {
+  $block-name: &; // #{$block-name}__element
+
   width: fit-content;
   margin: 0 auto;
   padding: 8px;
@@ -65,5 +67,4 @@
       border-top: 1px solid var(--grey);
     }
   }
-  $block-name: &; // #{$block-name}__element
 }

@@ -32,5 +32,12 @@
     cursor: not-allowed;
   }
 
+  &__number {
+
+    #{$block-name}:hover & {
+      color: var(--white);
+      border: 1px solid var(--white);
+    }
+  }
   $block-name: &; // #{$block-name}__element
 }

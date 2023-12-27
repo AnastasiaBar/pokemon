@@ -33,18 +33,5 @@
       padding: 16px;
       border-radius: 16px;
     }
-
-    &--disabled {
-      background: var(--black-100);
-      border-top: 1px solid var(--grey-200);
-      cursor: not-allowed;
-      transition: all 0.3s ease-out;
-
-      &:hover {
-        background: var(--grey);
-        border-top: 1px solid var(--white-300);
-        box-shadow: var(--shadow-button);
-      }
-    }
   }
 }

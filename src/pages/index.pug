@@ -13,7 +13,10 @@ block content
       .page__tabs
         +tabs
       .page__content
-        +sidebar
-        +container-cards
+        .page__tab(id='tab1')
+          +sidebar
+          +container-cards
+        .page__tab(id='tab2')
+          //+container-fight
       .page__paginator
         +paginator
