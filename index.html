@@ -51,8 +51,478 @@ window.addEventListener('resize', () => {
 </head>
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
-  <div class="container">
-    <p>test99</p>
+  <div class="page">
+    <div class="container">
+      <div class="page__tabs">
+        <div class="tabs">
+          <div class="tabs__inner">
+            <div class="tabs__button button button--default button--active" id="1">Pockemons</div>
+            <div class="tabs__button button button--default" id="2">Fight</div>
+          </div>
+        </div>
+      </div>
+      <div class="page__content">
+        <div class="page__tab" id="tab1">
+          <div class="sidebar">
+            <div class="sidebar__inner">
+              <div class="per-page">
+                <div class="per-page__inner">
+                  <div class="per-page__left">Per page:</div>
+                  <div class="per-page__right">
+                    <div class="per-page__item button button--active">12</div>
+                    <div class="per-page__item button button--default">24</div>
+                    <div class="per-page__item button button--default">48</div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter">
+                <div class="overlay"></div>
+                <div class="filter__inner">
+                  <div class="filter__item button button--active">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__all"></use>
+                      </svg>
+                      <p class="filter__name">All</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number filter__number--active">809</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__bug"></use>
+                      </svg>
+                      <p class="filter__name">Bug</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">77</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__dark"></use>
+                      </svg>
+                      <p class="filter__name">Dark</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">46</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__dragon"></use>
+                      </svg>
+                      <p class="filter__name">Dragon</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">45</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__electric"></use>
+                      </svg>
+                      <p class="filter__name">Electric</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">48</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__fairy"></use>
+                      </svg>
+                      <p class="filter__name">Fairy</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">47</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__fighting"></use>
+                      </svg>
+                      <p class="filter__name">Fighting</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">54</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__fire"></use>
+                      </svg>
+                      <p class="filter__name">fire</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">64</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__flying"></use>
+                      </svg>
+                      <p class="filter__name">Flying</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">98</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__ghost"></use>
+                      </svg>
+                      <p class="filter__name">Ghost</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">43</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__grass"></use>
+                      </svg>
+                      <p class="filter__name">Grass</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">97</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__ground"></use>
+                      </svg>
+                      <p class="filter__name">Ground</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">64</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__ice"></use>
+                      </svg>
+                      <p class="filter__name">Ice</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">34</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__normal"></use>
+                      </svg>
+                      <p class="filter__name">Normal</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">109</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__poison"></use>
+                      </svg>
+                      <p class="filter__name">Poison</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">66</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__psychic"></use>
+                      </svg>
+                      <p class="filter__name">Psychic</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">82</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__rock"></use>
+                      </svg>
+                      <p class="filter__name">Rock</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">60</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__steel"></use>
+                      </svg>
+                      <p class="filter__name">Steel</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">49</p>
+                    </div>
+                  </div>
+                  <div class="filter__item button">
+                    <div class="filter__left"><svg class="filter__icon">
+                        <use xlink:href="img/svgSprite.svg#icon__water"></use>
+                      </svg>
+                      <p class="filter__name">Water</p>
+                    </div>
+                    <div class="filter__right">
+                      <p class="filter__number button__number">131</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter__burger-btn"><svg class="filter__burger-icon">
+                <use xlink:href="img/svgSprite.svg#icon__filter"></use>
+              </svg></div>
+          </div>
+          <div class="container-cards">
+            <div class="loader">
+              <div class="loader__inner">
+                <div class="loader__item">
+                  <div class="loader__dot"></div>
+                </div>
+                <div class="loader__item">
+                  <div class="loader__dot"></div>
+                </div>
+                <div class="loader__item">
+                  <div class="loader__dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container-cards__inner">
+              <div class="card container-cards__item">
+                <div class="card__number">001</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-01.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Bulbasaur</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__poison"></use>
+                    </svg><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__grass"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">45</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">45</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">49 / 65</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">49 / 65</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card container-cards__item">
+                <div class="card__number">002</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-02.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Ivysaur</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__poison"></use>
+                    </svg><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__grass"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">60</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">60</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">62 / 80</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">63 / 80</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card container-cards__item">
+                <div class="card__number">003</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-03.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Venusaur</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__poison"></use>
+                    </svg><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__grass"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">80</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">80</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">82 / 100</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">83 / 100</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card container-cards__item">
+                <div class="card__number">004</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-04.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Charmander</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fire"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">39</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">65</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">52 / 60</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">43 / 50</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card container-cards__item">
+                <div class="card__number">005</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-05.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Charmeleon</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fire"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">58</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">80</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">64 / 80</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">58 / 65</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card container-cards__item">
+                <div class="card__number">006</div>
+                <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-06.png" alt="" /></div>
+                <div class="card__info">
+                  <p class="card__name">Charizard</p>
+                  <div class="card__type"><svg class="card__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fire"></use>
+                    </svg></div>
+                </div>
+                <div class="card__statistics">
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__health"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">78</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__speed"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">100</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__attack"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">64 / 109</p>
+                  </div>
+                  <div class="card__statistics-info">
+                    <div class="card__container-icon"><svg class="card__icon card__info-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__defence"></use>
+                      </svg></div>
+                    <p class="card__statistics-number">78 / 85</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__tab" id="tab2"><!--+container-fight--></div>
+      </div>
+      <div class="page__paginator">
+        <div class="paginator">
+          <div class="paginator__inner"><a class="paginator__btn button button--default-paginator" href="#">first</a><a class="paginator__btn button paginator__btn--active" href="#">1</a><a class="paginator__btn button button--default-paginator" href="#">2</a><a class="paginator__btn button button--default-paginator" href="#">3</a><a class="paginator__btn button button--default-paginator" href="#">4</a><a class="paginator__btn button button--default-paginator" href="#">5</a><a class="paginator__btn button button--default-paginator" href="#">...</a><a class="paginator__btn button button--default-paginator" href="#">last</a></div>
+        </div>
+      </div>
+    </div>
   </div><script src="js/bundle.js"></script>
 </body>
 
