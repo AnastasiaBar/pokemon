@@ -51,229 +51,224 @@ window.addEventListener('resize', () => {
 </head>
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
-  <div class="page">
-    <div class="container">
+  <div class="container">
+    <div class="page">
       <div class="page__tabs">
         <div class="tabs">
           <div class="tabs__inner">
-            <div class="tabs__button button button--default button--active" id="1">Pockemons</div>
-            <div class="tabs__button button button--default" id="2">Fight</div>
+            <div class="tabs__button button button--active" id="1">Pockemons</div>
+            <div class="tabs__button button" id="2">Fight</div>
           </div>
         </div>
       </div>
       <div class="page__content">
         <div class="page__tab" id="tab1">
+          <div class="overlay"></div>
           <div class="sidebar">
             <div class="sidebar__inner">
               <div class="per-page">
                 <div class="per-page__inner">
-                  <div class="per-page__left">Per page:</div>
+                  <h3 class="per-page__left">Per page:</h3>
                   <div class="per-page__right">
                     <div class="per-page__item button button--active">12</div>
-                    <div class="per-page__item button button--default">24</div>
-                    <div class="per-page__item button button--default">48</div>
+                    <div class="per-page__item button">24</div>
+                    <div class="per-page__item button">48</div>
                   </div>
                 </div>
               </div>
               <div class="filter">
-                <div class="overlay"></div>
-                <div class="filter__inner">
-                  <div class="filter__item button button--active">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__all"></use>
-                      </svg>
-                      <p class="filter__name">All</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number filter__number--active">809</p>
-                    </div>
+                <div class="filter__item button filter__item--active">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__all"></use>
+                    </svg>
+                    <h3 class="filter__name">All</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__bug"></use>
-                      </svg>
-                      <p class="filter__name">Bug</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">77</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number filter__number--active">809</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__dark"></use>
-                      </svg>
-                      <p class="filter__name">Dark</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">46</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__bug"></use>
+                    </svg>
+                    <h3 class="filter__name">Bug</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__dragon"></use>
-                      </svg>
-                      <p class="filter__name">Dragon</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">45</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">77</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__electric"></use>
-                      </svg>
-                      <p class="filter__name">Electric</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">48</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__dark"></use>
+                    </svg>
+                    <h3 class="filter__name">Dark</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__fairy"></use>
-                      </svg>
-                      <p class="filter__name">Fairy</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">47</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">46</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__fighting"></use>
-                      </svg>
-                      <p class="filter__name">Fighting</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">54</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__dragon"></use>
+                    </svg>
+                    <h3 class="filter__name">Dragon</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__fire"></use>
-                      </svg>
-                      <p class="filter__name">fire</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">64</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">45</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__flying"></use>
-                      </svg>
-                      <p class="filter__name">Flying</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">98</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__electric"></use>
+                    </svg>
+                    <h3 class="filter__name">Electric</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__ghost"></use>
-                      </svg>
-                      <p class="filter__name">Ghost</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">43</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">48</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__grass"></use>
-                      </svg>
-                      <p class="filter__name">Grass</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">97</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fairy"></use>
+                    </svg>
+                    <h3 class="filter__name">Fairy</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__ground"></use>
-                      </svg>
-                      <p class="filter__name">Ground</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">64</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">47</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__ice"></use>
-                      </svg>
-                      <p class="filter__name">Ice</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">34</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fighting"></use>
+                    </svg>
+                    <h3 class="filter__name">Fighting</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__normal"></use>
-                      </svg>
-                      <p class="filter__name">Normal</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">109</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">54</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__poison"></use>
-                      </svg>
-                      <p class="filter__name">Poison</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">66</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__fire"></use>
+                    </svg>
+                    <h3 class="filter__name">fire</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__psychic"></use>
-                      </svg>
-                      <p class="filter__name">Psychic</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">82</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">64</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__rock"></use>
-                      </svg>
-                      <p class="filter__name">Rock</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">60</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__flying"></use>
+                    </svg>
+                    <h3 class="filter__name">Flying</h3>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__steel"></use>
-                      </svg>
-                      <p class="filter__name">Steel</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">49</p>
-                    </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">98</h4>
                   </div>
-                  <div class="filter__item button">
-                    <div class="filter__left"><svg class="filter__icon">
-                        <use xlink:href="img/svgSprite.svg#icon__water"></use>
-                      </svg>
-                      <p class="filter__name">Water</p>
-                    </div>
-                    <div class="filter__right">
-                      <p class="filter__number button__number">131</p>
-                    </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__ghost"></use>
+                    </svg>
+                    <h3 class="filter__name">Ghost</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">43</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__grass"></use>
+                    </svg>
+                    <h3 class="filter__name">Grass</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">97</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__ground"></use>
+                    </svg>
+                    <h3 class="filter__name">Ground</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">64</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__ice"></use>
+                    </svg>
+                    <h3 class="filter__name">Ice</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">34</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__normal"></use>
+                    </svg>
+                    <h3 class="filter__name">Normal</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">109</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__poison"></use>
+                    </svg>
+                    <h3 class="filter__name">Poison</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">66</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__psychic"></use>
+                    </svg>
+                    <h3 class="filter__name">Psychic</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">82</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__rock"></use>
+                    </svg>
+                    <h3 class="filter__name">Rock</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">60</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__steel"></use>
+                    </svg>
+                    <h3 class="filter__name">Steel</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">49</h4>
+                  </div>
+                </div>
+                <div class="filter__item button">
+                  <div class="filter__left"><svg class="filter__icon">
+                      <use xlink:href="img/svgSprite.svg#icon__water"></use>
+                    </svg>
+                    <h3 class="filter__name">Water</h3>
+                  </div>
+                  <div class="filter__right">
+                    <h4 class="filter__number">131</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="filter__burger-btn"><svg class="filter__burger-icon">
-                <use xlink:href="img/svgSprite.svg#icon__filter"></use>
-              </svg></div>
           </div>
           <div class="container-cards">
             <div class="loader">
@@ -290,11 +285,11 @@ window.addEventListener('resize', () => {
               </div>
             </div>
             <div class="container-cards__inner">
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">001</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-01.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Bulbasaur</p>
+                  <h2 class="card__name">Bulbasaur</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__poison"></use>
                     </svg><svg class="card__icon">
@@ -306,33 +301,33 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">45</p>
+                    <h3 class="card__statistics-number">45</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">45</p>
+                    <h3 class="card__statistics-number">45</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">49 / 65</p>
+                    <h3 class="card__statistics-number">49 / 65</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">49 / 65</p>
+                    <h3 class="card__statistics-number">49 / 65</h3>
                   </div>
                 </div>
               </div>
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">002</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-02.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Ivysaur</p>
+                  <h2 class="card__name">Ivysaur</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__poison"></use>
                     </svg><svg class="card__icon">
@@ -344,33 +339,33 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">60</p>
+                    <h3 class="card__statistics-number">60</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">60</p>
+                    <h3 class="card__statistics-number">60</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">62 / 80</p>
+                    <h3 class="card__statistics-number">62 / 80</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">63 / 80</p>
+                    <h3 class="card__statistics-number">63 / 80</h3>
                   </div>
                 </div>
               </div>
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">003</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-03.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Venusaur</p>
+                  <h2 class="card__name">Venusaur</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__poison"></use>
                     </svg><svg class="card__icon">
@@ -382,33 +377,33 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">80</p>
+                    <h3 class="card__statistics-number">80</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">80</p>
+                    <h3 class="card__statistics-number">80</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">82 / 100</p>
+                    <h3 class="card__statistics-number">82 / 100</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">83 / 100</p>
+                    <h3 class="card__statistics-number">83 / 100</h3>
                   </div>
                 </div>
               </div>
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">004</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-04.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Charmander</p>
+                  <h2 class="card__name">Charmander</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__fire"></use>
                     </svg></div>
@@ -418,33 +413,33 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">39</p>
+                    <h3 class="card__statistics-number">39</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">65</p>
+                    <h3 class="card__statistics-number">65</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">52 / 60</p>
+                    <h3 class="card__statistics-number">52 / 60</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">43 / 50</p>
+                    <h3 class="card__statistics-number">43 / 50</h3>
                   </div>
                 </div>
               </div>
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">005</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-05.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Charmeleon</p>
+                  <h2 class="card__name">Charmeleon</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__fire"></use>
                     </svg></div>
@@ -454,33 +449,33 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">58</p>
+                    <h3 class="card__statistics-number">58</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">80</p>
+                    <h3 class="card__statistics-number">80</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">64 / 80</p>
+                    <h3 class="card__statistics-number">64 / 80</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">58 / 65</p>
+                    <h3 class="card__statistics-number">58 / 65</h3>
                   </div>
                 </div>
               </div>
-              <div class="card container-cards__item">
+              <div class="card">
                 <div class="card__number">006</div>
                 <div class="card__container-photo"><img class="card__photo" src="img/container-cards__photo-06.png" alt="" /></div>
                 <div class="card__info">
-                  <p class="card__name">Charizard</p>
+                  <h2 class="card__name">Charizard</h2>
                   <div class="card__type"><svg class="card__icon">
                       <use xlink:href="img/svgSprite.svg#icon__fire"></use>
                     </svg></div>
@@ -490,36 +485,50 @@ window.addEventListener('resize', () => {
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__health"></use>
                       </svg></div>
-                    <p class="card__statistics-number">78</p>
+                    <h3 class="card__statistics-number">78</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__speed"></use>
                       </svg></div>
-                    <p class="card__statistics-number">100</p>
+                    <h3 class="card__statistics-number">100</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__attack"></use>
                       </svg></div>
-                    <p class="card__statistics-number">64 / 109</p>
+                    <h3 class="card__statistics-number">64 / 109</h3>
                   </div>
                   <div class="card__statistics-info">
                     <div class="card__container-icon"><svg class="card__icon card__info-icon">
                         <use xlink:href="img/svgSprite.svg#icon__defence"></use>
                       </svg></div>
-                    <p class="card__statistics-number">78 / 85</p>
+                    <h3 class="card__statistics-number">78 / 85</h3>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="btn-burger">
+            <div class="btn-burger__burger-btn"><svg class="btn-burger__burger-icon">
+                <use xlink:href="img/svgSprite.svg#icon__filter"></use>
+              </svg></div>
           </div>
         </div>
         <div class="page__tab" id="tab2"><!--+container-fight--></div>
       </div>
       <div class="page__paginator">
         <div class="paginator">
-          <div class="paginator__inner"><a class="paginator__btn button button--default-paginator" href="#">first</a><a class="paginator__btn button paginator__btn--active" href="#">1</a><a class="paginator__btn button button--default-paginator" href="#">2</a><a class="paginator__btn button button--default-paginator" href="#">3</a><a class="paginator__btn button button--default-paginator" href="#">4</a><a class="paginator__btn button button--default-paginator" href="#">5</a><a class="paginator__btn button button--default-paginator" href="#">...</a><a class="paginator__btn button button--default-paginator" href="#">last</a></div>
+          <div class="paginator__inner">
+            <div class="paginator__btn">first</div>
+            <div class="paginator__btn paginator__btn--active">1</div>
+            <div class="paginator__btn">2</div>
+            <div class="paginator__btn">3</div>
+            <div class="paginator__btn">4</div>
+            <div class="paginator__btn">5</div>
+            <div class="paginator__btn paginator__btn--text">...</div>
+            <div class="paginator__btn">last</div>
+          </div>
         </div>
       </div>
     </div>
