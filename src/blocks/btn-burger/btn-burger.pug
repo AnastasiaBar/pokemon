@@ -1,13 +1,13 @@
-//- Все примеси в этом файле должны начинаться c имени блока (tabs)
+//- Все примеси в этом файле должны начинаться c имени блока (btn-burger)
 //- Упоминание имени блока в классах обязательно, без этого он не попадёт
 //- в сборку
 
-mixin tabs(mods)
+mixin btn-burger(mods)
 
   //- Принимает:
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +tabs('Текст', 'some-mod')
+        +btn-burger('Текст', 'some-mod')
 
   -
     // список модификаторов
@@ -15,11 +15,11 @@ mixin tabs(mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' tabs--' + modsList[i].trim();
+        allMods = allMods + ' btn-burger--' + modsList[i].trim();
       }
     }
 
-  .tabs(class=allMods)&attributes(attributes)
-    .tabs__inner
-      .tabs__button.button.button--active(id='1') Pockemons
-      .tabs__button.button(id='2') Fight
+  .btn-burger(class=allMods)&attributes(attributes)
+    .btn-burger__burger-btn
+      svg.btn-burger__burger-icon
+        use(xlink:href = 'img/svgSprite.svg#icon__filter')

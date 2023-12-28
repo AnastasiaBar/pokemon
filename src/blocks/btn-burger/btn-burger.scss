@@ -1,0 +1,33 @@
+@import "../../scss/breakpoints";
+@import "../../scss/variables";
+
+.btn-burger {
+  $block-name: &; // #{$block-name}__element
+
+  &__burger-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 12px;
+    z-index: var(--z-index-burger-btn);
+    padding: 12px;
+    background: var(--black-blur);
+    border: 1px solid var(--color-blue-300);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+
+    @media screen and (min-width: $screen-tl) {
+      display: none;
+    }
+  }
+
+  &__burger-icon {
+    z-index: -1;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+
+    [data-state="mobile-menu"] & {
+      z-index: -10;
+    }
+  }
+}

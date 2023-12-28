@@ -8,14 +8,12 @@
   position: relative;
   z-index: 100;
   width: 100%;
-  margin-bottom: 4px;
   padding: 8px 8px 8px 16px;
   background: var(--black-200);
   border-radius: 16px;
 
-  @media screen and (min-width: $screen-d) {
-    width: calc(100% - 16px);
-    margin-bottom: 16px;
+  @media screen and (min-width: $screen-tl) {
+    width: calc(100% - 8px);
   }
 
   &__inner {
@@ -26,6 +24,7 @@
   }
 
   &__left {
+    margin: 0;
     font-size: 14px;
     line-height: 115%;
     letter-spacing: 0.42px;

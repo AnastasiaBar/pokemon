@@ -20,111 +20,109 @@ mixin filter(mods)
     }
 
   .filter(class=allMods)&attributes(attributes)
-    .overlay
-    .filter__inner
-      -
-        let filters = [
-          {
-            icon: 'icon__all',
-            name: 'All',
-            number: '809'
-          },
-          {
-            icon: 'icon__bug',
-            name: 'Bug',
-            number: '77'
-          },
-          {
-            icon: 'icon__dark',
-            name: 'Dark',
-            number: '46'
-          },
-          {
-            icon: 'icon__dragon',
-            name: 'Dragon',
-            number: '45'
-          },
-          {
-            icon: 'icon__electric',
-            name: 'Electric',
-            number: '48'
-          },
-          {
-            icon: 'icon__fairy',
-            name: 'Fairy',
-            number: '47'
-          },
-          {
-            icon: 'icon__fighting',
-            name: 'Fighting',
-            number: '54'
-          },
-          {
-            icon: 'icon__fire',
-            name: 'fire',
-            number: '64'
-          },
-          {
-            icon: 'icon__flying',
-            name: 'Flying',
-            number: '98'
-          },
-          {
-            icon: 'icon__ghost',
-            name: 'Ghost',
-            number: '43'
-          },
-          {
-            icon: 'icon__grass',
-            name: 'Grass',
-            number: '97'
-          },
-          {
-            icon: 'icon__ground',
-            name: 'Ground',
-            number: '64'
-          },
-          {
-            icon: 'icon__ice',
-            name: 'Ice',
-            number: '34'
-          },
-          {
-            icon: 'icon__normal',
-            name: 'Normal',
-            number: '109'
-          },
-          {
-            icon: 'icon__poison',
-            name: 'Poison',
-            number: '66'
-          },
-          {
-            icon: 'icon__psychic',
-            name: 'Psychic',
-            number: '82'
-          },
-          {
-            icon: 'icon__rock',
-            name: 'Rock',
-            number: '60'
-          },
-          {
-            icon: 'icon__steel',
-            name: 'Steel',
-            number: '49'
-          },
-          {
-            icon: 'icon__water',
-            name: 'Water',
-            number: '131'
-          },
-        ]
-      each item, index in filters
-        .filter__item.button(class= (index === 0 ? "button--active" : ''))
-          .filter__left
-            svg.filter__icon
-              use(xlink:href = 'img/svgSprite.svg#' + item.icon)
-            p.filter__name= item.name
-          .filter__right
-            p.filter__number.button__number(class= (index === 0 ? "filter__number--active" : ''))= item.number
+    -
+      let filters = [
+        {
+          icon: 'icon__all',
+          name: 'All',
+          number: '809'
+        },
+        {
+          icon: 'icon__bug',
+          name: 'Bug',
+          number: '77'
+        },
+        {
+          icon: 'icon__dark',
+          name: 'Dark',
+          number: '46'
+        },
+        {
+          icon: 'icon__dragon',
+          name: 'Dragon',
+          number: '45'
+        },
+        {
+          icon: 'icon__electric',
+          name: 'Electric',
+          number: '48'
+        },
+        {
+          icon: 'icon__fairy',
+          name: 'Fairy',
+          number: '47'
+        },
+        {
+          icon: 'icon__fighting',
+          name: 'Fighting',
+          number: '54'
+        },
+        {
+          icon: 'icon__fire',
+          name: 'fire',
+          number: '64'
+        },
+        {
+          icon: 'icon__flying',
+          name: 'Flying',
+          number: '98'
+        },
+        {
+          icon: 'icon__ghost',
+          name: 'Ghost',
+          number: '43'
+        },
+        {
+          icon: 'icon__grass',
+          name: 'Grass',
+          number: '97'
+        },
+        {
+          icon: 'icon__ground',
+          name: 'Ground',
+          number: '64'
+        },
+        {
+          icon: 'icon__ice',
+          name: 'Ice',
+          number: '34'
+        },
+        {
+          icon: 'icon__normal',
+          name: 'Normal',
+          number: '109'
+        },
+        {
+          icon: 'icon__poison',
+          name: 'Poison',
+          number: '66'
+        },
+        {
+          icon: 'icon__psychic',
+          name: 'Psychic',
+          number: '82'
+        },
+        {
+          icon: 'icon__rock',
+          name: 'Rock',
+          number: '60'
+        },
+        {
+          icon: 'icon__steel',
+          name: 'Steel',
+          number: '49'
+        },
+        {
+          icon: 'icon__water',
+          name: 'Water',
+          number: '131'
+        },
+      ]
+    each item, index in filters
+      .filter__item.button(class= (index === 0 ? "filter__item--active" : ''))
+        .filter__left
+          svg.filter__icon
+            use(xlink:href = 'img/svgSprite.svg#' + item.icon)
+          h3.filter__name= item.name
+        .filter__right
+          h4.filter__number(class= (index === 0 ? "filter__number--active" : ''))= item.number

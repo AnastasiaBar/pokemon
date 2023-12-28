@@ -88,12 +88,12 @@ mixin container-cards(mods)
         ]
 
       each pokemon in pokemonInfo
-        .card.container-cards__item
+        .card
           .card__number= pokemon.number
           .card__container-photo
             img.card__photo(src= pokemon.photo, alt='')
           .card__info
-            p.card__name= pokemon.name
+            h2.card__name= pokemon.name
             .card__type
               each iconType in pokemon.type
                 svg.card__icon
@@ -103,19 +103,19 @@ mixin container-cards(mods)
               .card__container-icon
                 svg.card__icon.card__info-icon
                   use(xlink:href = 'img/svgSprite.svg#icon__health')
-              p.card__statistics-number= pokemon.health
+              h3.card__statistics-number= pokemon.health
             .card__statistics-info
               .card__container-icon
                 svg.card__icon.card__info-icon
                   use(xlink:href = 'img/svgSprite.svg#icon__speed')
-              p.card__statistics-number= pokemon.speed
+              h3.card__statistics-number= pokemon.speed
             .card__statistics-info
               .card__container-icon
                 svg.card__icon.card__info-icon
                   use(xlink:href = 'img/svgSprite.svg#icon__attack')
-              p.card__statistics-number= pokemon.attack
+              h3.card__statistics-number= pokemon.attack
             .card__statistics-info
               .card__container-icon
                 svg.card__icon.card__info-icon
                   use(xlink:href = 'img/svgSprite.svg#icon__defence')
-              p.card__statistics-number= pokemon.defence
+              h3.card__statistics-number= pokemon.defence

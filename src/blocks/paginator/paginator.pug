@@ -21,11 +21,11 @@ mixin paginator(mods)
 
   .paginator(class=allMods)&attributes(attributes)
     .paginator__inner
-      a.paginator__btn.button.button--default-paginator(href='#') first
-      a.paginator__btn.button.paginator__btn--active(href='#') 1
-      a.paginator__btn.button.button--default-paginator(href='#') 2
-      a.paginator__btn.button.button--default-paginator(href='#') 3
-      a.paginator__btn.button.button--default-paginator(href='#') 4
-      a.paginator__btn.button.button--default-paginator(href='#') 5
-      a.paginator__btn.button.button--default-paginator(href='#') ...
-      a.paginator__btn.button.button--default-paginator(href='#') last
+      .paginator__btn first
+      .paginator__btn.paginator__btn--active 1
+      .paginator__btn 2
+      .paginator__btn 3
+      .paginator__btn 4
+      .paginator__btn 5
+      .paginator__btn.paginator__btn--text ...
+      .paginator__btn last

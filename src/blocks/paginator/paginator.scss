@@ -6,10 +6,14 @@
   $block-name: &; // #{$block-name}__element
 
   width: fit-content;
-  margin: 0 auto;
+  margin: 4px auto 0;
   padding: 8px;
   background: var(--black-200);
   border-radius: 16px;
+
+  @media screen and (min-width: $screen-tl) {
+    margin: 8px auto 0;
+  }
 
   &__inner {
     display: flex;
@@ -17,7 +21,7 @@
     gap: 8px;
     justify-content: center;
 
-    @media screen and (min-width: $screen-d) {
+    @media screen and (min-width: $screen-tl) {
       flex-wrap: nowrap;
       margin: 0;
     }
@@ -34,27 +38,15 @@
     font-size: fluid(12, 16, 320, 1728);
     line-height: fluid(16, 24, 320, 1728);
     text-decoration: none;
+    background: var(--black-100);
     border: 1px solid transparent;
     border-top: 1px solid var(--grey-200);
     border-radius: 8px;
+    cursor: pointer;
 
-    @media screen and (min-width: $screen-d) {
+    @media screen and (min-width: $screen-tl) {
       min-width: 40px;
       height: 40px;
-    }
-
-    &:first-child {
-      order: 1;
-      width: calc(50% - 5px);
-
-      @media screen and (min-width: $screen-d) {
-        order: 0;
-      }
-    }
-
-    &:last-child {
-      order: 1;
-      width: calc(50% - 5px);
     }
 
     &:hover {
@@ -62,9 +54,41 @@
       border: 1px solid var(--color-blue-300);
     }
 
-    &--active {
+    &--text {
+      background: none;
+      border: none;
+
+      #{$block-name}:hover & {
+        background: none;
+        border: none;
+        cursor: default;
+      }
+    }
+
+    &--active,
+    &--active:hover {
       background: var(--grey-200);
+      border: none;
       border-top: 1px solid var(--grey);
+    }
+
+    &:first-child {
+      order: 1;
+      width: calc(50% - 5px);
+
+      @media screen and (min-width: $screen-tl) {
+        order: 0;
+        padding: 0 16px;
+      }
+    }
+
+    &:last-child {
+      order: 1;
+      width: calc(50% - 5px);
+
+      @media screen and (min-width: $screen-tl) {
+        padding: 0 16px;
+      }
     }
   }
 }

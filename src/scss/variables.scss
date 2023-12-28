@@ -20,7 +20,7 @@
   --color-orange: #f2994a;
   --color-yellow: #f2c94c;
   --color-green-100: #6fcf97;
-  ---color-green-200: #27ae60;
+  --color-green-200: #27ae60;
   --color-green-300: #219653;
   --color-blue-100: #56ccf2;
   --color-blue-200: #2d9cdb;
@@ -28,9 +28,14 @@
   --color-violet-100: #bb6bd9;
   --color-violet-200: #9b51e0;
   --color-violet-300: #9747ff;
-  --black-blur: #131619b3;
-  --overlay-blue: #131619b2;
+  --black-blur: rgba(19, 22, 25, 0.7);
 
+  --z-index-tabs: 10;
+  --z-index-overlay: 11;
+  --z-index-filter: 12;
+  --z-index-burger-btn: 14;
+  --z-index-sidebar: 13;
+  --z-index-container-card: 9;
 
   --shadow-button: 0 4px 16px 0 rgba(0 0 0 / 0.1);
 

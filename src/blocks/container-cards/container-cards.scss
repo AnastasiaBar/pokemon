@@ -5,31 +5,28 @@
   $block-name: &; // #{$block-name}__element
 
   position: relative;
-  z-index: 10;
+  z-index: var(--z-index-container-card);
   grid-column: 1/span 12;
   grid-template-columns: repeat(12, 1fr);
   padding: 8px;
   background: var(--black-200);
   border-radius: 24px;
 
-  @media screen and (min-width: $screen-d) {
+  @media screen and (min-width: $screen-tl) {
     grid-column: 4/span 9;
     grid-template-columns: repeat(4, 1fr);
   }
 
   &__inner {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     justify-content: space-between;
     width: 100%;
-  }
 
-  &__item {
-    width: calc(100% / 2 - 4px);
-
-    @media screen and (min-width: $screen-ti) {
-      width: calc(100% / 3 - 10px);
+    @media screen and (min-width: $screen-d) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

@@ -19,10 +19,8 @@ mixin sidebar(mods)
       }
     }
 
+  .overlay
   .sidebar(class=allMods)&attributes(attributes)
     .sidebar__inner
       +per-page
       +filter
-    .filter__burger-btn
-      svg.filter__burger-icon
-        use(xlink:href = 'img/svgSprite.svg#icon__filter')

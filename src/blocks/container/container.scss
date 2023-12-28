@@ -1,16 +1,9 @@
-@import "../../scss/breakpoints";
-
 .container {
   $block-name: &; // #{$block-name}__element
-
-  $padding-desktop: 120px;
   $padding-mobile: 16px;
 
   position: relative;
   width: calc(100% - $padding-mobile * 2);
+  max-width: 1488px;
   margin: 0 auto;
-
-  @media screen and (min-width: $screen-dxl) {
-    max-width: calc(1728px - $padding-desktop * 2);
-  }
 }

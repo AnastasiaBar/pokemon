@@ -4,6 +4,10 @@
 .tabs {
   $block-name: &; // #{$block-name}__element
 
+  @media screen and (min-width: $screen-tl) {
+    position: static;
+  }
+
   &__inner {
     display: flex;
     flex-wrap: nowrap;
@@ -11,11 +15,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 8px;
+    padding: 7px 8px;
     background: var(--black-200);
+    border-top: 1px solid transparent;
     border-radius: 16px;
 
-    @media screen and (min-width: $screen-d) {
+    @media screen and (min-width: $screen-tl) {
       border-radius: 24px;
     }
   }
@@ -29,7 +34,7 @@
     text-align: center;
     border-radius: 8px;
 
-    @media screen and (min-width: $screen-d) {
+    @media screen and (min-width: $screen-tl) {
       padding: 16px;
       border-radius: 16px;
     }
