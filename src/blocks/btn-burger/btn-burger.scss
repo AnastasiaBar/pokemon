@@ -21,13 +21,9 @@
   }
 
   &__burger-icon {
-    z-index: -1;
     width: 24px;
     height: 24px;
     line-height: 0;
-
-    [data-state="mobile-menu"] & {
-      z-index: -10;
-    }
+    pointer-events: none;
   }
 }
