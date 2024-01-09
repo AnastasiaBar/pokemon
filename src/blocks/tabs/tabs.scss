@@ -1,5 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/breakpoints";
+@import "../../scss/mixins/text-styles";
 
 .tabs {
   $block-name: &; // #{$block-name}__element
@@ -26,11 +27,10 @@
   }
 
   &__button {
+    @include tab;
+
     width: 100%;
     padding: 8px 16px;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.32px;
     text-align: center;
     border-radius: 8px;
 
