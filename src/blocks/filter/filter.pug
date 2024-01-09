@@ -124,5 +124,4 @@ mixin filter(mods)
           svg.filter__icon
             use(xlink:href = 'img/svgSprite.svg#' + item.icon)
           h3.filter__name= item.name
-        .filter__right
-          h4.filter__number(class= (index === 0 ? "filter__number--active" : ''))= item.number
+        span.filter__number(class= (index === 0 ? "filter__number--active" : ''))= item.number

@@ -24,7 +24,7 @@
   &__item {
     @include flex-center-sb;
 
-    padding: 5px 6px 6px 16px;
+    padding: 6px 6px 6px 16px;
     background: none;
     border-top: 1px solid transparent;
     border-radius: 12px;
@@ -73,9 +73,12 @@
   &__number {
     @include filter-amount;
 
+    min-width: 48px;
+    max-width: 48px;
     margin: 0;
     padding: 7px 8px;
     color: var(--grey-200);
+    white-space: nowrap;
     text-align: center;
     border: 1px solid var(--grey-200);
     border-radius: 8px;
