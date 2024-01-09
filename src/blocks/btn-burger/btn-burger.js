@@ -2,7 +2,7 @@ import ready from "../../js/utils/documentReady.js";
 
 ready(function () {
   const overlay = document.querySelector(".overlay");
-  const menuButton = document.querySelector(".btn-burger__burger-btn");
+  const menuButton = document.querySelector(".btn-burger");
   const menu = document.querySelector(".sidebar");
 
   menuButton.addEventListener("click", function () {

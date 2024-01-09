@@ -27,11 +27,4 @@
       position: static;
     }
   }
-
-  &__tab {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 0 8px;
-    width: 100%;
-  }
 }
