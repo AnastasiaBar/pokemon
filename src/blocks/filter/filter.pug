@@ -19,7 +19,7 @@ mixin filter(mods)
       }
     }
 
-  .filter(class=allMods)&attributes(attributes)
+  section.filter(class=allMods)&attributes(attributes)
     -
       let filters = [
         {
@@ -119,7 +119,7 @@ mixin filter(mods)
         },
       ]
     each item, index in filters
-      .filter__item.button(class= (index === 0 ? "filter__item--active" : ''))
+      .filter__item(class= (index === 0 ? "filter__item--active" : ''))
         .filter__left
           svg.filter__icon
             use(xlink:href = 'img/svgSprite.svg#' + item.icon)

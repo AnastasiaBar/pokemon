@@ -1,10 +1,12 @@
 @import "../../scss/breakpoints";
 @import "../../scss/variables";
-@import "../../scss/mixins/fluid";
+@import "../../scss/mixins/text-styles";
 
 .paginator {
   $block-name: &; // #{$block-name}__element
 
+  grid-column: 1/span 12;
+  grid-template-columns: repeat(12, 1fr);
   width: fit-content;
   margin: 4px auto 0;
   padding: 8px;
@@ -28,6 +30,8 @@
   }
 
   &__btn {
+    @include pagination;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,14 +39,13 @@
     height: 32px;
     padding: 0 4px;
     color: var(--white);
-    font-size: fluid(12, 16, 320, 1728);
-    line-height: fluid(16, 24, 320, 1728);
     text-decoration: none;
     background: var(--black-100);
     border: 1px solid transparent;
     border-top: 1px solid var(--grey-200);
     border-radius: 8px;
     cursor: pointer;
+    transition: border 0.3s ease-out;
 
     @media screen and (min-width: $screen-tl) {
       min-width: 40px;
@@ -70,6 +73,7 @@
       background: var(--grey-200);
       border: none;
       border-top: 1px solid var(--grey);
+      cursor: default;
     }
 
     &:first-child {

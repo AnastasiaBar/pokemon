@@ -1,6 +1,7 @@
 @import "../../scss/breakpoints";
 @import "../../scss/variables";
-@import "../../scss/mixins/fluid";
+@import "../../scss/mixins/text-styles";
+@import "../../scss/mixins/flexbox";
 
 .per-page {
   $block-name: &; // #{$block-name}__element
@@ -11,10 +12,6 @@
   padding: 8px 8px 8px 16px;
   background: var(--black-200);
   border-radius: 16px;
-
-  @media screen and (min-width: $screen-tl) {
-    width: calc(100% - 8px);
-  }
 
   &__inner {
     display: flex;
@@ -28,6 +25,7 @@
     font-size: 14px;
     line-height: 115%;
     letter-spacing: 0.42px;
+    white-space: nowrap;
   }
 
   &__right {
@@ -36,14 +34,17 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    @include pagination;
+    @include flex-center;
+
+    width: 32px;
+    height: 32px;
     color: var(--white);
-    font-size: fluid(12, 16, 320, 1728);
-    line-height: fluid(16, 24, 320, 1728);
     border-radius: 8px;
+
+    @media screen and (min-width: $screen-d) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
