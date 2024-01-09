@@ -8,16 +8,13 @@ block variables
 
 block content
 
-  .container
-    .page
-      .page__tabs
-        +tabs
-      .page__content
-        .page__tab(id='tab1')
-          +sidebar
-          +container-cards
-          +btn-burger
-        .page__tab(id='tab2')
-          //+container-fight
-      .page__paginator
+  .content
+    .content__section(id='tab1')
+      .content__inner
+        +sidebar
+        +container-cards
+      .content__inner
+        +btn-burger
         +paginator
+    .content__section(id='tab2')
+      +container-fight
