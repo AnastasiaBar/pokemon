@@ -1,0 +1,26 @@
+@import "../../scss/mixins/flexbox";
+
+.content {
+  $block-name: &; // #{$block-name}__element
+
+  &__section {
+    @include flex-column;
+
+    gap: 12px;
+
+    @media screen and (min-width: $screen-tl) {
+      gap: 25px;
+    }
+
+    @media screen and (min-width: $screen-d) {
+      gap: 40px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 8px;
+    width: 100%;
+  }
+}
