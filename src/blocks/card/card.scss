@@ -1,13 +1,14 @@
 @import "../../scss/variables";
 @import "../../scss/breakpoints";
-@import "../../scss/mixins/fluid";
+@import "../../scss/mixins/flexbox";
+@import "../../scss/mixins/text-styles";
 
 .card {
   $block-name: &; // #{$block-name}__element
 
+  @include flex-column;
+
   position: relative;
-  display: flex;
-  flex-direction: column;
   gap: 8px;
   width: 100%;
   padding: 8px;
@@ -18,8 +19,8 @@
   transition: background-color 0.3s ease-out;
 
   @media screen and (min-width: $screen-tl) {
-    gap: 24px;
-    padding: 8px 8px 16px;
+    gap: 16px;
+    padding: 7px 8px 16px;
   }
 
   &:hover {
@@ -34,12 +35,12 @@
   }
 
   &__number {
+    @include card-num;
+
     position: absolute;
     top: 16px;
     left: 16px;
     color: var(--white);
-    font-size: fluid(8, 12, 320, 1728);
-    line-height: fluid(8, 14, 320, 1728);
 
     @media screen and (min-width: $screen-tl) {
       top: 20px;
@@ -48,8 +49,8 @@
   }
 
   &__container-photo {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
+
     padding: 16px 8px;
     background: var(--black-100);
     border-radius: 8px;
@@ -77,11 +78,10 @@
   }
 
   &__info {
-    display: flex;
+    @include flex-vertical-end;
+
     flex-wrap: wrap;
     gap: 12px;
-    align-items: flex-end;
-    justify-content: center;
     width: 100%;
     padding: 0;
 
@@ -93,13 +93,12 @@
   }
 
   &__name {
+    @include card-title;
+
     width: 100%;
     margin: 0;
     overflow: hidden;
     color: var(--white);
-    font-size: fluid(16, 32, 320, 1728);
-    line-height: fluid(20, 39.68, 320, 1728);
-    letter-spacing: fluid(0.32, 0.64, 320, 1728);
     white-space: nowrap;
     text-align: center;
     text-overflow: ellipsis;
@@ -142,14 +141,14 @@
 
     @media screen and (min-width: $screen-tl) {
       gap: 8px;
-      margin: 0;
+      margin: 8px 0 0;
       padding: 0 8px;
     }
   }
 
   &__container-icon {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
+
     width: 100%;
     padding: 7px 12px;
     border-bottom: 1px solid var(--grey-200);
@@ -173,9 +172,9 @@
   }
 
   &__statistics-info {
-    display: flex;
+    @include flex-center;
+
     flex-wrap: wrap;
-    align-items: center;
     border: 1px solid var(--grey-200);
     border-radius: 8px;
     transition: border 0.3s ease-out;
@@ -190,12 +189,11 @@
   }
 
   &__statistics-number {
+    @include card-data;
+
     width: 100%;
     margin: 0;
     padding: 8px 0;
-    font-size: fluid(8, 16, 320, 1728);
-    line-height: fluid(8, 16, 320, 1728);
-    letter-spacing: fluid(0.4, 0.8, 320, 1728);
     text-align: center;
 
     @media screen and (min-width: $screen-tl) {

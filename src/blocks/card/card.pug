@@ -1,0 +1,52 @@
+//- Все примеси в этом файле должны начинаться c имени блока (btn-burger)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт
+//- в сборку
+
+mixin card(pokemon,mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +card('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card--' + modsList[i].trim();
+      }
+    }
+
+  .card(class=allMods)&attributes(attributes)
+    .card__number= pokemon.number
+    .card__container-photo
+      img.card__photo(src= pokemon.photo, alt='')
+    .card__info
+      h2.card__name= pokemon.name
+      .card__type
+        each iconType in pokemon.type
+          svg.card__icon
+            use(xlink:href = 'img/svgSprite.svg#' + iconType)
+    .card__statistics
+      .card__statistics-info
+        .card__container-icon
+          svg.card__icon.card__info-icon
+            use(xlink:href = 'img/svgSprite.svg#icon__health')
+        h3.card__statistics-number= pokemon.health
+      .card__statistics-info
+        .card__container-icon
+          svg.card__icon.card__info-icon
+            use(xlink:href = 'img/svgSprite.svg#icon__speed')
+        h3.card__statistics-number= pokemon.speed
+      .card__statistics-info
+        .card__container-icon
+          svg.card__icon.card__info-icon
+            use(xlink:href = 'img/svgSprite.svg#icon__attack')
+        h3.card__statistics-number= pokemon.attack
+      .card__statistics-info
+        .card__container-icon
+          svg.card__icon.card__info-icon
+            use(xlink:href = 'img/svgSprite.svg#icon__defence')
+        h3.card__statistics-number= pokemon.defence
