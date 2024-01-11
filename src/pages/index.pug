@@ -8,13 +8,27 @@ block variables
 
 block content
 
-  .content
-    .content__section(id='tab1')
-      .content__inner
-        +sidebar
-        +container-cards
-      .content__inner
-        +btn-burger
-        +paginator
-    .content__section(id='tab2')
-      //+container-fight
+  -
+    let tabs = ['Pockemons', 'Fight']
+
+  .container
+    .overlay
+    .tabs
+      .tabs__header
+        section.tab
+          each tab, index in tabs
+            .tab__button.button(id= index, class= (index === 0 ? "button--active" : ''))= tab
+      .tabs__main
+        .tabs__content(id='tab1')
+          .tabs__inner
+            section.sidebar
+              .sidebar__inner
+                +per-page
+                +filter
+            +container-cards
+          .tabs__inner
+            .btn-burger
+              +icon('icon__filter', 'btn-burger__burger-icon')
+            +paginator
+        .tabs__content(id='tab2')
+          //+container-fight
