@@ -10,6 +10,7 @@ block content
 
   -
     let tabs = ['Pockemons', 'Fight']
+    let perPage = ['12', '24', '48']
 
   .container
     .overlay
@@ -23,7 +24,11 @@ block content
           .tabs__inner
             section.sidebar
               .sidebar__inner
-                +per-page
+                section.per-page
+                  h3.per-page__left Per page:
+                  .per-page__right
+                    each page in perPage
+                      .per-page__item.button(class= (index === 0 ? "button--active" : ''))= page
                 +filter
             +container-cards
           .tabs__inner

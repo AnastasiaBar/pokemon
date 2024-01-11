@@ -32,14 +32,15 @@
     @include pagination;
     @include flex-center;
 
-    width: 32px;
-    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0 4px;
     color: var(--white);
     border-radius: 8px;
 
     @media screen and (min-width: $screen-d) {
-      width: 40px;
-      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
     }
   }
 }

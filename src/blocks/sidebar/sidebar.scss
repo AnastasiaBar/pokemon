@@ -9,7 +9,7 @@
   left: -300px;
   z-index: var(--z-index-sidebar);
   max-height: 100vh;
-  padding: 8px;
+  padding: 8px 8px 80px;
   overflow-y: auto;
   background: var(--grey-300);
   transition: left 0.3s ease-out;

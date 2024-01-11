@@ -123,5 +123,6 @@ mixin filter(mods)
       .filter__item(class= (index === 0 ? "filter__item--active" : ''))
         .filter__left
           +icon(item.icon, 'filter__icon')
-          h3.filter__name= item.name
-        span.filter__number(class= (index === 0 ? "filter__number--active" : ''))= item.number
+          .filter__name= item.name
+        .filter__right
+          span.filter__number(class= (index === 0 ? "filter__number--active" : ''))= item.number

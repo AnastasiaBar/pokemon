@@ -12,7 +12,7 @@
   z-index: var(--z-index-filter);
   gap: 2px;
   width: 264px;
-  padding: 8px 8px 80px;
+  padding: 8px;
   background: var(--black-200);
   border-radius: 24px;
 
@@ -52,8 +52,8 @@
   }
 
   &__right {
+    justify-content: center;
     min-width: 48px;
-    max-width: 48px;
     white-space: nowrap;
   }
 
@@ -73,8 +73,8 @@
   &__number {
     @include filter-amount;
 
-    min-width: 48px;
-    max-width: 48px;
+    display: block;
+    width: 100%;
     margin: 0;
     padding: 7px 8px;
     color: var(--grey-200);

@@ -70,8 +70,8 @@
       pointer-events: none;
     }
 
-    &:first-child,
-    &:last-child {
+    &--first,
+    &--last {
       order: 1;
       width: calc(50% - 5px);
 
@@ -80,7 +80,7 @@
       }
     }
 
-    &:first-child {
+    &--first {
       @media screen and (min-width: $screen-t) {
         order: 0;
       }

@@ -21,11 +21,11 @@ mixin paginator(mods)
 
   section.paginator(class=allMods)&attributes(attributes)
     .paginator__inner
-      .paginator__btn first
+      .paginator__btn.paginator__btn--first first
       .paginator__btn.paginator__btn--active 1
       .paginator__btn 2
       .paginator__btn 3
       .paginator__btn 4
       .paginator__btn 5
       .paginator__btn.paginator__btn--text ...
-      .paginator__btn last
+      .paginator__btn.paginator__btn--last last
