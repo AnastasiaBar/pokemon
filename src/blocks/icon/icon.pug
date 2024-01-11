@@ -1,13 +1,14 @@
-//- Все примеси в этом файле должны начинаться c имени блока (sidebar)
+//- Все примеси в этом файле должны начинаться c имени блока (icon)
 //- Упоминание имени блока в классах обязательно, без этого он не попадёт
 //- в сборку
 
-mixin sidebar(mods)
+mixin icon(text, mods)
 
   //- Принимает:
+  //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +sidebar('Текст', 'some-mod')
+        +icon('Текст', 'some-mod')
 
   -
     // список модификаторов
@@ -15,12 +16,10 @@ mixin sidebar(mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' sidebar--' + modsList[i].trim();
+        allMods = allMods + ' icon--' + modsList[i].trim();
       }
     }
 
-  .overlay
-  .sidebar(class=allMods)&attributes(attributes)
-    .sidebar__inner
-      +per-page
-      +filter
+  .icon&attributes(attributes)
+    svg(class= mods)
+      use(xlink:href = 'img/svgSprite.svg#' + text)

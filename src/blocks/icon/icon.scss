@@ -1,0 +1,5 @@
+.icon {
+  $block-name: &; // #{$block-name}__element
+
+  pointer-events: none;
+}
