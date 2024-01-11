@@ -20,9 +20,9 @@
 }
 
 @mixin card-title {
-  font-size: fluid(16, 32, 320, 992);
-  line-height: fluid(20, 40, 320, 992);
-  letter-spacing: fluid(0.32, 0.64, 320, 992);
+  font-size: fluid(16, 32, 360, 992);
+  line-height: fluid(20, 40, 360, 992);
+  letter-spacing: fluid(0.32, 0.64, 360, 992);
 
   @media screen and (min-width: $screen-tl) {
     font-size: 32px;
@@ -32,9 +32,9 @@
 }
 
 @mixin card-data {
-  font-size: fluid(8, 16, 320, 992);
-  line-height: fluid(8, 16, 320, 992);
-  letter-spacing: fluid(0.4, 0.8, 320, 992);
+  font-size: fluid(8, 16, 360, 992);
+  line-height: fluid(8, 16, 360, 992);
+  letter-spacing: fluid(0.4, 0.8, 360, 992);
 
   @media screen and (min-width: $screen-tl) {
     font-size: 16px;
@@ -44,8 +44,8 @@
 }
 
 @mixin card-num {
-  font-size: fluid(8, 12, 320, 992);
-  line-height: fluid(8, 14, 320, 992);
+  font-size: fluid(8, 12, 360, 992);
+  line-height: fluid(8, 14, 360, 992);
 
   @media screen and (min-width: $screen-tl) {
     font-size: 12px;
@@ -54,8 +54,8 @@
 }
 
 @mixin pagination {
-  font-size: fluid(12, 16, 320, 1280);
-  line-height: fluid(16, 24, 320, 1280);
+  font-size: fluid(12, 16, 360, 1280);
+  line-height: fluid(16, 24, 360, 1280);
 
   @media screen and (min-width: $screen-d) {
     font-size: 16px;

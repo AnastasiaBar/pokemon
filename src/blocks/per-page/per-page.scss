@@ -6,19 +6,14 @@
 .per-page {
   $block-name: &; // #{$block-name}__element
 
+  @include flex-center-sb;
+
   position: relative;
   z-index: 100;
   width: 100%;
   padding: 8px 8px 8px 16px;
   background: var(--black-200);
   border-radius: 16px;
-
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
 
   &__left {
     margin: 0;

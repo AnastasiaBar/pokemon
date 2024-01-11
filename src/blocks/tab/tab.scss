@@ -1,0 +1,35 @@
+@import "../../scss/variables";
+@import "../../scss/breakpoints";
+@import "../../scss/mixins/text-styles";
+
+.tab {
+  $block-name: &; // #{$block-name}__element
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 8px;
+  width: 100%;
+  padding: 7px 8px;
+  background: var(--black-200);
+  border-top: 1px solid transparent;
+  border-radius: 16px;
+
+  @media screen and (min-width: $screen-tl) {
+    position: static;
+    border-radius: 24px;
+  }
+
+  &__button {
+    @include tab;
+
+    width: 100%;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 8px;
+
+    @media screen and (min-width: $screen-tl) {
+      padding: 16px;
+      border-radius: 16px;
+    }
+  }
+}

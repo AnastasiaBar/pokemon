@@ -19,73 +19,72 @@ mixin container-cards(mods)
       }
     }
 
+  -
+    let pokemonInfo = [
+      {
+        name: 'Bulbasaur',
+        photo: 'img/container-cards__photo-01.png',
+        number: '001',
+        type: ['icon__poison', 'icon__grass'],
+        health: '45',
+        speed: '45',
+        attack: '49 / 65',
+        defence: '49 / 65'
+      },
+      {
+        name: 'Ivysaur',
+        photo: 'img/container-cards__photo-02.png',
+        number: '002',
+        type: ['icon__poison', 'icon__grass'],
+        health: '60',
+        speed: '60',
+        attack: '62 / 80',
+        defence: '63 / 80'
+      },
+      {
+        name: 'Venusaur',
+        photo: 'img/container-cards__photo-03.png',
+        number: '003',
+        type: ['icon__poison', 'icon__grass'],
+        health: '80',
+        speed: '80',
+        attack: '82 / 100',
+        defence: '83 / 100'
+      },
+      {
+        name: 'Charmander',
+        photo: 'img/container-cards__photo-04.png',
+        number: '004',
+        type: ['icon__fire'],
+        health: '39',
+        speed: '65',
+        attack: '52 / 60',
+        defence: '43 / 50'
+      },
+      {
+        name: 'Charmeleon',
+        photo: 'img/container-cards__photo-05.png',
+        number: '005',
+        type: ['icon__fire'],
+        health: '58',
+        speed: '80',
+        attack: '64 / 80',
+        defence: '58 / 65'
+      },
+      {
+        name: 'Charizard',
+        photo: 'img/container-cards__photo-06.png',
+        number: '006',
+        type: ['icon__fire'],
+        health: '78',
+        speed: '100',
+        attack: '64 / 109',
+        defence: '78 / 85'
+      }
+    ]
+
   section.container-cards(class=allMods)&attributes(attributes)
     +loader
     .container-cards__inner
-
-      -
-        let pokemonInfo = [
-          {
-            name: 'Bulbasaur',
-            photo: 'img/container-cards__photo-01.png',
-            number: '001',
-            type: ['icon__poison', 'icon__grass'],
-            health: '45',
-            speed: '45',
-            attack: '49 / 65',
-            defence: '49 / 65'
-          },
-          {
-            name: 'Ivysaur',
-            photo: 'img/container-cards__photo-02.png',
-            number: '002',
-            type: ['icon__poison', 'icon__grass'],
-            health: '60',
-            speed: '60',
-            attack: '62 / 80',
-            defence: '63 / 80'
-          },
-          {
-            name: 'Venusaur',
-            photo: 'img/container-cards__photo-03.png',
-            number: '003',
-            type: ['icon__poison', 'icon__grass'],
-            health: '80',
-            speed: '80',
-            attack: '82 / 100',
-            defence: '83 / 100'
-          },
-          {
-            name: 'Charmander',
-            photo: 'img/container-cards__photo-04.png',
-            number: '004',
-            type: ['icon__fire'],
-            health: '39',
-            speed: '65',
-            attack: '52 / 60',
-            defence: '43 / 50'
-          },
-          {
-            name: 'Charmeleon',
-            photo: 'img/container-cards__photo-05.png',
-            number: '005',
-            type: ['icon__fire'],
-            health: '58',
-            speed: '80',
-            attack: '64 / 80',
-            defence: '58 / 65'
-          },
-          {
-            name: 'Charizard',
-            photo: 'img/container-cards__photo-06.png',
-            number: '006',
-            type: ['icon__fire'],
-            health: '78',
-            speed: '100',
-            attack: '64 / 109',
-            defence: '78 / 85'
-          }
-        ]
-
       each pokemon in pokemonInfo
         +card(pokemon)

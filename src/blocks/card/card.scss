@@ -86,7 +86,6 @@
     padding: 0;
 
     @media screen and (min-width: $screen-tl) {
-      flex-wrap: nowrap;
       justify-content: space-between;
       padding: 0 8px;
     }
@@ -95,7 +94,7 @@
   &__name {
     @include card-title;
 
-    width: 100%;
+    max-width: 75%;
     margin: 0;
     overflow: hidden;
     color: var(--white);
@@ -195,6 +194,8 @@
     margin: 0;
     padding: 8px 0;
     text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
 
     @media screen and (min-width: $screen-tl) {
       padding: 0;
