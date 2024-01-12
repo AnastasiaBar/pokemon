@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/mixins/text-styles";
 
 .button {
   $block-name: &; // #{$block-name}__element
@@ -6,8 +7,11 @@
   display: inline-flex;
   justify-content: center;
   box-sizing: border-box;
+  background: var(--black-100);
   background-color: var(--black-100);
+  border: none;
   border-top: 1px solid var(--grey-200);
+  border-radius: 16px;
   transition: background-color 0.3s ease-out;
 
   &:hover {
@@ -20,11 +24,34 @@
   &--active {
     background: var(--grey-200);
     border-top: 1px solid var(--grey);
+    pointer-events: none;
+  }
+
+  &--disabled {
+    @include tab;
+
+    color: var(--grey-200);
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  &--default {
+    @include tab;
+
+    color: var(--white);
+    text-transform: uppercase;
+    background: var(--color-red);
+    border-top: 1px solid var(--white-200);
 
     &:hover {
-      background: var(--grey-200);
-      border-top: 1px solid var(--grey);
-      cursor: default;
+      background: var(--color-orange);
     }
+  }
+
+  &--fight-active {
+    @include tab;
+
+    background: var(--color-violet-200);
+    border-top: 1px solid var(--white-200);
   }
 }

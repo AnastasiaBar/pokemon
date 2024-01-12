@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+
+.search-panel {
+  $block-name: &; // #{$block-name}__element
+
+  width: 100%;
+  padding: 16px 16px 16px 56px;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  background: var(--black-100);
+  border-bottom: 1px solid var(--grey-200);
+  border-radius: 16px;
+
+  ::placeholder {
+    color: var(--grey);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

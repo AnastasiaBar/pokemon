@@ -1,0 +1,67 @@
+//- Все примеси в этом файле должны начинаться c имени блока (card-fight)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт
+//- в сборку
+
+mixin card-fight(pokemon, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +card-fight('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card-fight--' + modsList[i].trim();
+      }
+    }
+
+  .card-fight(class=allMods)&attributes(attributes)
+    .card-fight__left
+      .card-fight__number= pokemon.number
+      .card-fight__container-photo
+        img.card-fight__photo(src= pokemon.photo, alt='')
+      .card-fight__container-info
+        h2.card-fight__name= pokemon.name
+        .card-fight__type
+          each type in pokemon.type
+            +icon(type, 'card-fight__icon')
+    .card-fight__right
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__health', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.health
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__attack', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.attack
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__speed', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.speed
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__defence', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.defence
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__weight', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.weight
+      .card-fight__statistics-info
+        .card-fight__container-icon
+          +icon('icon__height', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.height
+      .card-fight__statistics-info.card-fight__statistics-info--one-cell
+        .card-fight__container-icon
+          +icon('icon__weakness', 'card-fight__icon')
+        .card-fight__weakness-icons
+          each weaknessIcons in pokemon.weaknessIcon
+            +icon(weaknessIcons, 'card-fight__icon')
+      .card-fight__statistics-info.card-fight__statistics-info--one-cell
+        .card-fight__container-icon
+          +icon('icon__abilitie', 'card-fight__icon')
+        .card-fight__statistics-number= pokemon.abilitie

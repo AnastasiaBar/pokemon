@@ -1,0 +1,57 @@
+//- Все примеси в этом файле должны начинаться c имени блока (container-fight)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт
+//- в сборку
+
+mixin container-fight(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +container-fight('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' container-fight--' + modsList[i].trim();
+      }
+    }
+
+  -
+    let pokemonFight = [
+      {
+        name: 'Bulbasaur',
+        photo: 'img/container-cards__photo-01.png',
+        number: '001',
+        type: ['icon__poison', 'icon__grass'],
+        health: '0',
+        attack: '0',
+        speed: '0',
+        defence: '0',
+        weight: '0',
+        height: '0',
+        weakness: '0',
+        weaknessIcon: ['icon__fire', 'icon__psychic', 'icon__flying', 'icon__ice'],
+        abilitie: 'Overgrow'
+      },
+    ]
+
+  .container-fight(class=allMods)&attributes(attributes)
+    +loader
+    .container-fight__inner
+      .container-fight__hero
+        .container-fight__search
+          input.search-panel(placeholder='Choose fighter')
+        //.container-fight__flight-card
+          p.container-fight__hero-empty Type name of  champion above
+        each pokemon in pokemonFight
+          +card-fight(pokemon)
+      .container-fight__text VS
+      .container-fight__hero
+        .container-fight__search
+          input.search-panel(placeholder='Choose fighter')
+        .container-fight__flight-card
+          p.container-fight__hero-empty Type name of  champion above
+    button.container-fight__button.button.button--disabled fight!
