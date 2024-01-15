@@ -7,6 +7,7 @@
   $block-name: &; // #{$block-name}__element
 
   display: flex;
+  flex-direction: column;
   gap: 16px;
   width: 100%;
   padding: 7px 8px 8px;
@@ -15,32 +16,42 @@
   border-radius: 16px;
   box-shadow: var(--shadow-button);
 
+  @media screen and (min-width: $screen-t) {
+    flex-direction: row;
+  }
+
+  &--winner {
+    background: var(--monochrome-500, #363a3d);
+    border-top: 1px solid var(--monochrome-400, #686b6e);
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+  }
+
   &__left {
     @include flex-column;
 
     position: relative;
     flex-shrink: 0;
     gap: 8px;
-    width: 152px;
+    width: 100%;
+
+    @media screen and (min-width: $screen-t) {
+      width: 152px;
+    }
   }
 
   &__number {
-    @include card-num;
-
     position: absolute;
-    top: 16px;
-    left: 16px;
+    top: 12px;
+    left: 12px;
     color: var(--white);
-
-    @media screen and (min-width: $screen-tl) {
-      top: 12px;
-      left: 12px;
-    }
+    font-size: 12px;
+    line-height: 120%;
   }
 
   &__container-photo {
     @include flex-center;
 
+    width: 100%;
     padding: 16px 8px;
     background: var(--black-100);
     border-radius: 8px;
@@ -48,10 +59,18 @@
     @media screen and (min-width: $screen-tl) {
       padding: 16px;
     }
+
+    #{$block-name}--winner & {
+      background: var(--black);
+    }
+  }
+
+  &__photo {
+    width: 120px;
+    height: 120px;
   }
 
   &__name {
-    max-width: 75%;
     margin: 0;
     overflow: hidden;
     color: var(--white);
@@ -67,22 +86,23 @@
     @include flex-center;
 
     gap: 8px;
+    margin: 4px 0;
+  }
 
-    @media screen and (min-width: $screen-tl) {
-      gap: 12px;
-      margin-top: 12px;
-    }
+  &__container-info {
+    @include flex-column;
+
+    gap: 8px;
   }
 
   &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__type-icon {
     width: 16px;
     height: 16px;
-    line-height: 0;
-
-    @media screen and (min-width: $screen-tl) {
-      width: 24px;
-      height: 24px;
-    }
   }
 
   &__right {
@@ -96,19 +116,19 @@
   &__statistics-info {
     @include flex-center;
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     grid-column: 1/span;
     grid-template-columns: repeat(2, 1fr);
     border: 1px solid var(--grey-200);
     border-radius: 8px;
     transition: border 0.3s ease-out;
 
-    @media screen and (min-width: $screen-ti) {
-      flex-wrap: nowrap;
-    }
-
     &--one-cell {
       grid-column: 1/span 2;
+    }
+
+    #{$block-name}--winner & {
+      border: 1px solid var(--grey);
     }
   }
 
@@ -120,11 +140,12 @@
   }
 
   &__statistics-number {
-    @include card-data;
-
     width: 100%;
     margin: 0;
     padding: 8px 0;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
     text-align: center;
     word-wrap: break-word;
     word-break: break-all;
@@ -137,16 +158,18 @@
   &__container-icon {
     @include flex-center;
 
-    width: 100%;
     padding: 7px 12px;
-    border-bottom: 1px solid var(--grey-200);
+    border-right: 1px solid var(--grey-200);
     transition: border 0.3s ease-out;
 
     @media screen and (min-width: $screen-ti) {
       display: block;
       width: fit-content;
-      border-right: 1px solid var(--grey-200);
       border-bottom: 0;
+    }
+
+    #{$block-name}--winner & {
+      border-right: 1px solid var(--grey);
     }
   }
 }

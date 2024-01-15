@@ -29,7 +29,7 @@ mixin card-fight(pokemon, mods)
         h2.card-fight__name= pokemon.name
         .card-fight__type
           each type in pokemon.type
-            +icon(type, 'card-fight__icon')
+            +icon(type, 'card-fight__type-icon')
     .card-fight__right
       .card-fight__statistics-info
         .card-fight__container-icon
