@@ -1,26 +1,32 @@
 @import "../../scss/variables";
+@import "../../scss/mixins/flexbox";
 
 .loader {
   $block-name: &; // #{$block-name}__element
 
   display: none;
-  align-items: center;
-  justify-content: center;
   border: 2px dashed var(--grey-300);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
 
   &--active {
-    display: flex;
+    @include flex-center;
+
     height: 480px;
   }
 
+  &--active-search {
+    @include flex-center;
+
+    height: 56px;
+    background: var(--black-100);
+  }
+
   &__inner {
+    @include flex-center;
+
     position: relative;
-    display: flex;
     gap: 2px;
-    align-items: center;
-    justify-content: center;
   }
 
   &__item {
