@@ -11,9 +11,9 @@ ready(function () {
 });
 
 function openTab(evt, tabName) {
-  let tabcontent = document.getElementsByClassName("page__tab");
+  let tabcontent = document.getElementsByClassName("tabs__content");
   Array.from(tabcontent).forEach((item) => {
-    item.style.display = "none";
+    item.classList.add("tabs__content--hidden");
   });
 
   let tablinks = document.getElementsByClassName("tab__button");
@@ -21,6 +21,6 @@ function openTab(evt, tabName) {
     item.className = item.className.replace("button--active", "");
   });
 
-  document.getElementById(`tab${tabName}`).style.display = "grid";
+  document.getElementById(`tab${tabName}`).classList.remove("tabs__content--hidden");
   evt.currentTarget.className += " button--active";
 }

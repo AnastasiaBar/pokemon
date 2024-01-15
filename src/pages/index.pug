@@ -82,7 +82,7 @@ block content
           each tab, index in tabs
             .tab__button.button(id= index, class= (index === 0 ? "button--active" : ''))= tab
       .tabs__main
-        .tabs__content(id='tab1')
+        .tabs__content(id='tab0')
           .tabs__inner
             section.sidebar
               .sidebar__inner
@@ -93,7 +93,6 @@ block content
                       .per-page__item.button(class= (index === 0 ? "button--active" : ''))= page
                 +filter
             section.container-cards(class=allMods)&attributes(attributes)
-              +loader
               .container-cards__inner
                 each pokemon in pokemonInfo
                   +card(pokemon)
@@ -101,5 +100,7 @@ block content
             .btn-burger
               +icon('icon__filter', 'btn-burger__burger-icon')
             +paginator
-        .tabs__content(id='tab2')
+        .tabs__content.tabs__content--hidden(id='tab1')
+          +loader
           +container-fight
+          .tabs__round Round draw!
