@@ -39,19 +39,17 @@ mixin container-fight(mods)
     ]
 
   .container-fight(class=allMods)&attributes(attributes)
-    +loader
     .container-fight__inner
       .container-fight__hero
         .container-fight__search
-          input.search-panel(placeholder='Choose fighter')
-        //.container-fight__flight-card
-          p.container-fight__hero-empty Type name of  champion above
+          +search-panel
+        //p.container-fight__hero-empty Type name of  champion above
         each pokemon in pokemonFight
           +card-fight(pokemon)
-      .container-fight__text VS
+      p.container-fight__text VS
       .container-fight__hero
         .container-fight__search
-          input.search-panel(placeholder='Choose fighter')
-        .container-fight__flight-card
-          p.container-fight__hero-empty Type name of  champion above
+          +search-panel
+        p.container-fight__hero-empty Type name of champion above
     button.container-fight__button.button.button--disabled fight!
+    .container-fight__winner Charmander is the winner!
