@@ -12,9 +12,13 @@
   opacity: 0;
 
   &--active {
-    height: 100%;
+    height: calc(100vh - 180px);
     opacity: 1;
     transition: none;
+
+    @media screen and (min-width: $screen-tl) {
+      height: 100%;
+    }
   }
 
   &--active-search {
