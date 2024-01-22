@@ -1,13 +1,12 @@
-// import ready from "../js/utils/documentReady.js";
-// import getScrollSize from "../js/utils/getScrollSize.js";
+window.onload = function () {
+  const pageLoader = document.querySelector(".page__loader");
+  const loader = document.querySelector(".page__loader .loader");
 
-// ready(function () {
-//   console.log("DOM героически построен!");
-//   // Добавление кастомного свойства с системной шириной скролла
-//   document.documentElement.style.setProperty("--css-scroll-size", `${getScrollSize()}px`);
-// });
+  pageLoader.classList.add("page__loader--active");
+  loader.classList.add("loader--active");
 
-// import $ from "jquery"; // Перед использованием установить как зависимость
-// $(function () {
-//   console.log("jQuery героически сработал!");
-// });
+  setTimeout(function () {
+    pageLoader.classList.remove("page__loader--active");
+    loader.classList.remove("loader--active");
+  }, 2000);
+};
