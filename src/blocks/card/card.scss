@@ -16,7 +16,9 @@
   border-top: 1px solid var(--grey-200);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
+  opacity: 0;
   transition: background-color 0.3s ease-out;
+  animation: card-visible 0.7s forwards;
 
   @media screen and (min-width: $screen-tl) {
     gap: 16px;
@@ -210,5 +212,9 @@
     @media screen and (min-width: $screen-tl) {
       padding: 0;
     }
+  }
+
+  @keyframes card-visible {
+    100% { opacity: 1; }
   }
 }

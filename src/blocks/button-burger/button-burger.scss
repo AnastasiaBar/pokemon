@@ -1,7 +1,7 @@
 @import "../../scss/breakpoints";
 @import "../../scss/variables";
 
-.btn-burger {
+.button-burger {
   $block-name: &; // #{$block-name}__element
 
   position: fixed;

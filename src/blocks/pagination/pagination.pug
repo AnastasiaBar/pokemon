@@ -15,17 +15,17 @@ mixin paginator(mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' paginator--' + modsList[i].trim();
+        allMods = allMods + ' pagination--' + modsList[i].trim();
       }
     }
 
-  section.paginator(class=allMods)&attributes(attributes)
-    .paginator__inner
-      .paginator__btn.paginator__btn--first first
-      .paginator__btn.paginator__btn--active 1
-      .paginator__btn 2
-      .paginator__btn 3
-      .paginator__btn 4
-      .paginator__btn 5
-      .paginator__btn.paginator__btn--text ...
-      .paginator__btn.paginator__btn--last last
+  section.pagination(class=allMods)&attributes(attributes)
+    .pagination__button.pagination__button--first first
+    .pagination__button.pagination__button--text ...
+    .pagination__button.pagination__button--active 1
+    .pagination__button 2
+    .pagination__button 3
+    .pagination__button 4
+    .pagination__button 5
+    .pagination__button.pagination__button--text ...
+    .pagination__button.pagination__button--last last

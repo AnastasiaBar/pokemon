@@ -1,42 +1,34 @@
 @import "../../scss/breakpoints";
 @import "../../scss/variables";
 @import "../../scss/mixins/text-styles";
+@import "../../scss/mixins/flexbox";
 
-.paginator {
+.pagination {
   $block-name: &; // #{$block-name}__element
 
+  @include flex-center;
+
+  flex-wrap: wrap;
   grid-column: 1/span 12;
   grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
   width: fit-content;
   margin: 0 auto;
   padding: 8px;
   background: var(--black-200);
   border-radius: 16px;
 
-  @media screen and (min-width: $screen-tl) {
-    margin: 0 auto;
+  @media screen and (min-width: $screen-t) {
+    flex-wrap: nowrap;
   }
 
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-
-    @media screen and (min-width: $screen-t) {
-      flex-wrap: nowrap;
-      margin: 0;
-    }
-  }
-
-  &__btn {
+  &__button {
     @include pagination;
+    @include flex-center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-width: 32px;
-    height: 32px;
+    max-width: fit-content;
+    min-height: 32px;
     padding: 0 4px;
     color: var(--white);
     text-decoration: none;
@@ -49,7 +41,7 @@
 
     @media screen and (min-width: $screen-tl) {
       min-width: 40px;
-      height: 40px;
+      min-height: 40px;
     }
 
     &:hover {
@@ -74,6 +66,7 @@
     &--last {
       order: 1;
       width: calc(50% - 5px);
+      max-width: calc(50% - 5px);
 
       @media screen and (min-width: $screen-t) {
         padding: 0 16px;

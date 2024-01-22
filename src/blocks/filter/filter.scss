@@ -49,12 +49,14 @@
     @include flex-center-sb;
 
     gap: 12px;
+    pointer-events: none;
   }
 
   &__right {
     justify-content: center;
     min-width: 48px;
     white-space: nowrap;
+    pointer-events: none;
   }
 
   &__icon {
@@ -84,7 +86,7 @@
     border-radius: 8px;
     transition: 0.3s ease-out;
 
-    #{$block-name}__item:hover &, &--active {
+    #{$block-name}__item:hover &, #{$block-name}__item--active & {
       color: var(--white);
       border: 1px solid var(--white-300);
     }

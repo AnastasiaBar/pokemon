@@ -5,17 +5,28 @@
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
   padding: 12px 0 32px;
 
   @media screen and (min-width: $screen-tl) {
-    gap: 25px;
     padding: 40px 0 30px;
   }
 
   @media screen and (min-width: $screen-d) {
-    gap: 40px;
     padding: 80px 0 72px;
+  }
+
+  &__loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-index-burger-button);
+    width: 100%;
+    height: 0;
+    background: var(--black-100);
+
+    &--active {
+      height: 100vh;
+    }
   }
 
   &__overlay {

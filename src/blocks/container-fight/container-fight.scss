@@ -82,12 +82,11 @@
     }
   }
 
-  &__winner {
+  &__result {
     @include card-title;
 
     margin: 0;
     padding: 16px;
-    color: var(--color-red);
     text-align: center;
     border: 2px dashed var(--grey-300);
     border-radius: 16px;
@@ -95,6 +94,14 @@
 
     @media screen and (min-width: $screen-tl) {
       padding: 26px 16px;
+    }
+
+    &--red {
+      color: var(--color-red);
+    }
+
+    &--yellow {
+      color: var(--color-yellow);
     }
   }
 }

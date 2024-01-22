@@ -8,7 +8,7 @@
 
   @include flex-column;
 
-  gap: 12px;
+  gap: 0;
 
   @media screen and (min-width: $screen-tl) {
     gap: 25px;
@@ -22,9 +22,13 @@
     position: sticky;
     top: 0;
     z-index: var(--z-index-tabs);
+    padding: 12px 0;
+    background: var(--monochrome-700-blur, rgb(19 22 25 / 70%));
+    backdrop-filter: blur(4px);
 
     @media screen and (min-width: $screen-tl) {
       position: static;
+      padding: 0;
     }
   }
 

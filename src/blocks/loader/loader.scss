@@ -4,15 +4,17 @@
 .loader {
   $block-name: &; // #{$block-name}__element
 
-  display: none;
+  @include flex-center;
+
   border: 2px dashed var(--grey-300);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
+  opacity: 0;
 
   &--active {
-    @include flex-center;
-
-    height: 480px;
+    height: 100%;
+    opacity: 1;
+    transition: none;
   }
 
   &--active-search {
