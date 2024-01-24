@@ -18,7 +18,8 @@
   box-shadow: var(--shadow-button);
   opacity: 0;
   transition: background-color 0.3s ease-out;
-  animation: card-visible 0.7s forwards;
+  animation: card-visible 0.5s forwards;
+  animation-delay: 0.4s;
 
   @media screen and (min-width: $screen-tl) {
     gap: 16px;
