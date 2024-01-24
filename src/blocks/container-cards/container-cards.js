@@ -5,7 +5,10 @@ export { templateCard, creatingPokemonCard };
 
 ready(async function () {
   try {
-    const data = await pokemonData(1, 12);
+    const data = await pokemonData(
+      1,
+      document.querySelector(".per-page__item.button--active").textContent,
+    );
     creatingPokemonCard(data);
     createPagination(data.totalPages, data.page);
   } catch (err) {
@@ -17,36 +20,32 @@ ready(async function () {
 function creatingPokemonCard(data) {
   const containerCard = document.querySelector(".container-cards__inner");
   containerCard.innerHTML = null;
-  let number = 1;
-  data.page === 1 ? (number = 1) : (number = data.page * data.perPage - data.perPage + 1);
   data.items.forEach((item) => {
-    containerCard.innerHTML += templateCard(item, number++);
+    containerCard.innerHTML += templateCard(item);
   });
 }
 
 // шаблон карточки покемона
-function templateCard(data, number) {
-  number = String(number).padStart(3, "0");
-  let typeIcons = "";
-  if (data.type.length === 1) {
-    typeIcons = `<div class="icon"><svg class="card__icon">
-      <use xlink:href="img/svgSprite.svg#icon__${data.type[0].toLowerCase()}"></use>
-    </svg></div>`;
-  } else {
-    typeIcons = `<div class="icon"><svg class="card__icon">
-      <use xlink:href="img/svgSprite.svg#icon__${data.type[0].toLowerCase()}"></use>
-    </svg></div>
-    <div class="icon"><svg class="card__icon">
-      <use xlink:href="img/svgSprite.svg#icon__${data.type[1]?.toLowerCase()}"></use>
-    </svg></div>`;
-  }
+function templateCard(data) {
+  let typePokemon = "";
+
+  data.type.forEach((item) => {
+    typePokemon += `<div class="icon">
+                      <svg class="card-fight__type-icon">
+                        <use xlink:href="img/svgSprite.svg#icon__${item.toLowerCase()}"></use>
+                      </svg>
+                    </div>`;
+  });
+
   return `<div class="card">
-          <div class="card__number">${number}</div>
-          <div class="card__container-photo"><img class="card__photo" src="http://127.0.0.1:8090/api/files/${data.collectionId}/${data.id}/${data.image}" alt=""></div>
+          <div class="card__number">${data.id.slice(-3)}</div>
+          <div class="card__container-photo"><img class="card__photo" src="http://127.0.0.1:8090/api/files/${
+            data.collectionId
+          }/${data.id}/${data.image}" alt=""></div>
           <div class="card__info">
             <h2 class="card__name">${data.name.english}</h2>
             <div class="card__type">
-              ${typeIcons}
+              ${typePokemon}
             </div>
           </div>
           <div class="card__statistics">
