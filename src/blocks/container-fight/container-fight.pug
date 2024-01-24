@@ -40,17 +40,19 @@ mixin container-fight(mods)
 
   .container-fight(class=allMods)&attributes(attributes)
     .container-fight__inner
-      .container-fight__hero
+      .container-fight__hero(id='0')
         .container-fight__search
           +search-panel
-        //p.container-fight__hero-empty Type name of  champion above
-        each pokemon in pokemonFight
+        p.container-fight__hero-empty Type name of  champion above
+        .container-fight__card-fight.container-fight__card-fight--disabled
+        .card-fight.card-fight--disabled
+        //each pokemon in pokemonFight
           +card-fight(pokemon)
       p.container-fight__text VS
-      .container-fight__hero
+      .container-fight__hero(id='1')
         .container-fight__search
           +search-panel
         p.container-fight__hero-empty Type name of champion above
+        .container-fight__card-fight.container-fight__card-fight--disabled
     button.container-fight__button.button.button--disabled fight!
-    .container-fight__result Charmander is the winner!
-    .container-fight__result Round draw!
+    .container-fight__result.container-fight__result--disabled

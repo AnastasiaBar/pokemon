@@ -3,8 +3,6 @@
 @import "../../scss/mixins/text-styles";
 
 .container-fight {
-  $block-name: &; // #{$block-name}__element
-
   @include flex-column;
 
   gap: 16px;
@@ -12,6 +10,9 @@
   padding: 8px;
   background: var(--black-200);
   border-radius: 24px;
+  opacity: 0;
+  animation: card-visible 0.7s forwards;
+  animation-delay: 0.4s;
 
   @media screen and (min-width: $screen-tl) {
     gap: 48px;
@@ -61,6 +62,16 @@
     @media screen and (min-width: $screen-tl) {
       padding: 0;
     }
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &__card-fight {
+    &--disabled {
+      display: none;
+    }
   }
 
   &__text {
@@ -96,6 +107,10 @@
       padding: 26px 16px;
     }
 
+    &--disabled {
+      display: none;
+    }
+
     &--red {
       color: var(--color-red);
     }
@@ -103,5 +118,10 @@
     &--yellow {
       color: var(--color-yellow);
     }
+  }
+  $block-name: &; // #{$block-name}__element
+
+  @keyframes card-visible {
+    100% { opacity: 1; }
   }
 }
