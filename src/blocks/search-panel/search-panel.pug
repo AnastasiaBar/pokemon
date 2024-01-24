@@ -20,30 +20,9 @@ mixin search-panel(text, mods)
       }
     }
 
-    let searchItems = [
-      {
-        number: '001',
-        name: 'Bulbasaur',
-        photo: 'img/container-cards__photo-01.png'
-      },
-      {
-        number: '002',
-        name: 'Ivysaur',
-        photo: 'img/container-cards__photo-02.png'
-      },
-      {
-        number: '003',
-        name: 'Venusaur',
-        photo: 'img/container-cards__photo-03.png'
-      }
-    ]
-
   .search-panel(class=allMods)&attributes(attributes)
     .search-panel__search
+      img.search-panel__photo-input(src='', alt='')
       input.search-panel__input(placeholder='Choose fighter')
     .search-panel__result
-      each item in searchItems
-        .search-panel__item
-          img.search-panel__photo(src= item.photo, alt='')
-          p.search-panel__text.
-            #[span= item.number] — #[span= item.name]
+      +loader
