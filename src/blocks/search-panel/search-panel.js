@@ -6,7 +6,6 @@ let activePokemon = {
   photo: "",
   name: "",
 };
-
 ready(function () {
   const inputs = document.querySelectorAll(".search-panel__input");
   let input;
@@ -48,6 +47,14 @@ ready(function () {
           list.length > 0
             ? (containerResult.innerHTML = list.map((item) => templateList(item)).join(""))
             : (containerResult.innerHTML = "Pokemon not found");
+
+          const searchResult = document.querySelectorAll(".search-panel__item .search-panel__text");
+          searchResult.forEach((item) => {
+            item.innerHTML = item.textContent.replace(
+              new RegExp(searchValue, "gi"),
+              '<span class="search-panel__text--active">$&</span>',
+            );
+          });
         }, 2000);
       }
     });
@@ -99,7 +106,6 @@ function templateList(data) {
 // функция для открытия выпадающего списка
 function inputState(input, state) {
   const containerResult = input.closest(".search-panel").querySelector(".search-panel__result");
-  //containerResult.innerHTML = null;
   state
     ? containerResult.classList.add("search-panel__result--visible")
     : containerResult.classList.remove("search-panel__result--visible");
@@ -107,7 +113,7 @@ function inputState(input, state) {
 }
 
 function loader() {
-  return `<div class="loader loader--active">
+  return `<div class="loader loader--active-search">
             <div class="loader__inner">
               <div class="loader__item">
                 <div class="loader__dot"></div>
