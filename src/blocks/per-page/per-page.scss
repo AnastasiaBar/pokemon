@@ -5,6 +5,8 @@
 @import "../../scss/mixins/skeleton";
 
 .per-page {
+  $block-name: &; // #{$block-name}__element
+
   @include flex-center-sb;
 
   position: relative;
@@ -62,5 +64,4 @@
       min-height: 40px;
     }
   }
-  $block-name: &; // #{$block-name}__element
 }

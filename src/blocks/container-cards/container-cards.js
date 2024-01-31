@@ -32,7 +32,7 @@ function templateCard(data) {
 
   data.type.forEach((item) => {
     typePokemon += `<div class="icon">
-                      <svg class="card-fight__type-icon">
+                      <svg class="card__icon">
                         <use xlink:href="img/svgSprite.svg#icon__${item.toLowerCase()}"></use>
                       </svg>
                     </div>`;

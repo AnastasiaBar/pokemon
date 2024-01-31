@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/breakpoints";
 @import "../../scss/mixins/flexbox";
 
 .loader {
@@ -6,13 +7,13 @@
 
   @include flex-center;
 
-  border: 2px dashed var(--grey-300);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
   opacity: 0;
 
   &--active {
     height: calc(100vh - 180px);
+    border: 2px dashed var(--grey-300);
     opacity: 1;
     transition: none;
 
@@ -27,6 +28,9 @@
 
     height: 56px;
     background: var(--black-100);
+    border: none;
+    opacity: 1;
+    transition: none;
   }
 
   &__inner {

@@ -112,5 +112,9 @@
     line-height: 150%;
     letter-spacing: 0.32px;
     pointer-events: none;
+
+    &--active {
+      color: var(--color-yellow);
+    }
   }
 }

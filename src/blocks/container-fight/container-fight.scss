@@ -3,6 +3,8 @@
 @import "../../scss/mixins/text-styles";
 
 .container-fight {
+  $block-name: &; // #{$block-name}__element
+
   @include flex-column;
 
   gap: 16px;
@@ -119,7 +121,6 @@
       color: var(--color-yellow);
     }
   }
-  $block-name: &; // #{$block-name}__element
 
   @keyframes card-visible {
     100% { opacity: 1; }

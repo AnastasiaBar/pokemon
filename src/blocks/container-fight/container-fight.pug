@@ -19,25 +19,6 @@ mixin container-fight(mods)
       }
     }
 
-  -
-    let pokemonFight = [
-      {
-        name: 'Bulbasaur',
-        photo: 'img/container-cards__photo-01.png',
-        number: '001',
-        type: ['icon__poison', 'icon__grass'],
-        health: '0',
-        attack: '0',
-        speed: '0',
-        defence: '0',
-        weight: '0',
-        height: '0',
-        weakness: '0',
-        weaknessIcon: ['icon__fire', 'icon__psychic', 'icon__flying', 'icon__ice'],
-        abilitie: 'Overgrow'
-      },
-    ]
-
   .container-fight(class=allMods)&attributes(attributes)
     .container-fight__inner
       .container-fight__hero(id='0')
@@ -46,8 +27,6 @@ mixin container-fight(mods)
         p.container-fight__hero-empty Type name of  champion above
         .container-fight__card-fight.container-fight__card-fight--disabled
         .card-fight.card-fight--disabled
-        //each pokemon in pokemonFight
-          +card-fight(pokemon)
       p.container-fight__text VS
       .container-fight__hero(id='1')
         .container-fight__search

@@ -28,8 +28,8 @@ function createPagination(totalPages, page) {
   let afterPage = page > 4 ? page + 2 : page + 1;
 
   if (page > 3 && totalPages > 5) {
-    paginatorButton += `<div class="pagination__button pagination__button--first" id="1">first</div>
-              <div class="pagination__button pagination__button--text">...</div>`;
+    paginatorButton += `<button class="pagination__button pagination__button--first" id="1">first</button>
+              <div class="pagination__text">...</div>`;
   }
 
   switch (page) {
@@ -56,13 +56,13 @@ function createPagination(totalPages, page) {
   for (let i = beforePage; i <= afterPage; i++) {
     if (i > 0 && i <= totalPages) {
       const active = page === i ? "pagination__button--active" : "";
-      paginatorButton += `<div class="pagination__button ${active}" id="${i}">${i}</div>`;
+      paginatorButton += `<button class="pagination__button ${active}" id="${i}">${i}</button>`;
     }
   }
 
   if (page < totalPages - 2 && totalPages > 5) {
-    paginatorButton += `<div class="pagination__button pagination__button--text">...</div>
-            <div class="pagination__button pagination__button--last" id="${totalPages}">last</div>`;
+    paginatorButton += `<div class="pagination__text">...</div>
+            <button class="pagination__button pagination__button--last" id="${totalPages}">last</button>`;
   }
 
   pagination.innerHTML = paginatorButton;

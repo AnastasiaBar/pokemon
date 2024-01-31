@@ -10,11 +10,13 @@ body {
 html {
   min-width: 320px;
   min-height: 100%;
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
   font-size: var(--font-size-root);
   font-family: sans-serif;
   line-height: normal;
   -webkit-tap-highlight-color: rgb(var(--color-black) 0);
-  -webkit-text-size-adjust: 100%; // stylelint-disable-line
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
 
