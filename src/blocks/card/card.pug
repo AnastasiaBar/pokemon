@@ -19,7 +19,7 @@ mixin card(pokemon,mods)
       }
     }
 
-  .card(class=allMods)&attributes(attributes)
+  .card.card__skeleton.skeleton(class=allMods)&attributes(attributes)
     .card__number= pokemon.number
     .card__container-photo
       img.card__photo(src= pokemon.photo, alt='')
