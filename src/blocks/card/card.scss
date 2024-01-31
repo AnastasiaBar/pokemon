@@ -2,6 +2,7 @@
 @import "../../scss/breakpoints";
 @import "../../scss/mixins/flexbox";
 @import "../../scss/mixins/text-styles";
+@import "../../scss/mixins/skeleton";
 
 .card {
   $block-name: &; // #{$block-name}__element
@@ -16,10 +17,7 @@
   border-top: 1px solid var(--grey-200);
   border-radius: 16px;
   box-shadow: var(--shadow-button);
-  opacity: 0;
   transition: background-color 0.3s ease-out;
-  animation: card-visible 0.5s forwards;
-  animation-delay: 0.4s;
 
   @media screen and (min-width: $screen-tl) {
     gap: 16px;
@@ -35,6 +33,35 @@
       0 8px 10px -6px rgba(0 0 0 / 5%),
       0 20px 25px -5px rgba(0 0 0 / 5%);
     cursor: pointer;
+  }
+
+  &--animate {
+    opacity: 0;
+    animation: card-visible 0.5s forwards;
+    animation-delay: 0.4s;
+  }
+
+  &__skeleton {
+    &--active {
+      pointer-events: none;
+
+      #{$block-name}__container-photo,  #{$block-name}__info, #{$block-name}__statistics-info {
+        position: relative;
+
+        &::before {
+          @include background-gradient(var(--grey-200), var(--skeleton-color));
+
+          position: absolute;
+          top: -1px;
+          left: 0;
+          width: 100%;
+          height: calc(100% + 1px);
+          border-radius: 8px;
+          animation: skeleton 2s infinite linear;
+          content: "";
+        }
+      }
+    }
   }
 
   &__number {

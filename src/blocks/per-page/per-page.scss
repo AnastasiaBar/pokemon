@@ -2,10 +2,9 @@
 @import "../../scss/variables";
 @import "../../scss/mixins/text-styles";
 @import "../../scss/mixins/flexbox";
+@import "../../scss/mixins/skeleton";
 
 .per-page {
-  $block-name: &; // #{$block-name}__element
-
   @include flex-center-sb;
 
   position: relative;
@@ -14,6 +13,26 @@
   padding: 8px 8px 8px 16px;
   background: var(--black-200);
   border-radius: 16px;
+
+  &__skeleton {
+    &--active {
+      position: relative;
+      pointer-events: none;
+
+      &::before {
+        @include background-gradient(var(--grey-200), var(--skeleton-color));
+
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        border-radius: 8px;
+        animation: skeleton 2s infinite linear;
+        content: "";
+      }
+    }
+  }
 
   &__left {
     margin: 0;
@@ -43,4 +62,5 @@
       min-height: 40px;
     }
   }
+  $block-name: &; // #{$block-name}__element
 }

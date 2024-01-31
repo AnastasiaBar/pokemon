@@ -78,7 +78,7 @@ block content
   .container
     .tabs
       .tabs__header
-        section.tab
+        section.tab.tab__skeleton.skeleton
           each tab, index in tabs
             .tab__button.button(id= index, class= (index === 0 ? "button--active" : ''))= tab
       .tabs__main
@@ -86,7 +86,7 @@ block content
           .tabs__inner
             section.sidebar
               .sidebar__inner
-                section.per-page
+                section.per-page.per-page__skeleton.skeleton
                   h3.per-page__left Per page:
                   .per-page__right
                     each page, index in perPage

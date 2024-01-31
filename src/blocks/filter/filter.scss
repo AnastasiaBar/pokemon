@@ -2,6 +2,7 @@
 @import "../../scss/variables";
 @import "../../scss/mixins/text-styles";
 @import "../../scss/mixins/flexbox";
+@import "../../scss/mixins/skeleton";
 
 .filter {
   $block-name: &; // #{$block-name}__element
@@ -19,6 +20,25 @@
   @media screen and (min-width: $screen-tl) {
     width: 100%;
     padding: 8px;
+  }
+
+  &__skeleton {
+    position: relative;
+
+    &--active {
+      &::before {
+        @include background-gradient(var(--grey-200), var(--skeleton-color));
+
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        border-radius: 8px;
+        animation: skeleton 2s infinite linear;
+        content: "";
+      }
+    }
   }
 
   &__item {

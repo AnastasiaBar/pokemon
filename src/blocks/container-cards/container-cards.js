@@ -1,10 +1,11 @@
-import ready from "../../js/utils/documentReady";
 import { pokemonData } from "../../js/pocketBase/pocketBase";
 import { createPagination } from "../pagination/pagination";
-export { templateCard, creatingPokemonCard };
+export { templateCard, creatingPokemonCard, loadCard };
 
-ready(async function () {
+async function loadCard() {
   try {
+    const containerCard = document.querySelector(".container-cards__inner");
+    containerCard.innerHTML = null;
     const data = await pokemonData(
       1,
       document.querySelector(".per-page__item.button--active").textContent,
@@ -14,7 +15,7 @@ ready(async function () {
   } catch (err) {
     console.log(err);
   }
-});
+}
 
 // функция для вывода карточек с покемонами
 function creatingPokemonCard(data) {
@@ -37,7 +38,7 @@ function templateCard(data) {
                     </div>`;
   });
 
-  return `<div class="card">
+  return `<div class="card card--animate">
           <div class="card__number">${data.id.slice(-3)}</div>
           <div class="card__container-photo"><img class="card__photo" src="http://127.0.0.1:8090/api/files/${
             data.collectionId

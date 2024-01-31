@@ -2,10 +2,9 @@
 @import "../../scss/variables";
 @import "../../scss/mixins/text-styles";
 @import "../../scss/mixins/flexbox";
+@import "../../scss/mixins/skeleton";
 
 .pagination {
-  $block-name: &; // #{$block-name}__element
-
   @include flex-center;
 
   flex-wrap: wrap;
@@ -20,6 +19,25 @@
 
   @media screen and (min-width: $screen-t) {
     flex-wrap: nowrap;
+  }
+
+  &__skeleton {
+    position: relative;
+
+    &--active {
+      &::before {
+        @include background-gradient(var(--grey-200), var(--skeleton-color));
+
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        border-radius: 8px;
+        animation: skeleton 2s infinite linear;
+        content: "";
+      }
+    }
   }
 
   &__button {
@@ -79,4 +97,5 @@
       }
     }
   }
+  $block-name: &; // #{$block-name}__element
 }

@@ -120,7 +120,7 @@ mixin filter(mods)
 
 
 
-  section.filter(class=allMods)&attributes(attributes)
+  section.filter.filter__skeleton.skeleton(class=allMods)&attributes(attributes)
     each item, index in filters
       .filter__item(class= (index === 0 ? "filter__item--active" : ''))
         .filter__left

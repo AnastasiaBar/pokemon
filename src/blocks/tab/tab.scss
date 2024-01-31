@@ -1,6 +1,7 @@
 @import "../../scss/variables";
 @import "../../scss/breakpoints";
 @import "../../scss/mixins/text-styles";
+@import "../../scss/mixins/skeleton";
 
 .tab {
   $block-name: &; // #{$block-name}__element
@@ -16,6 +17,29 @@
   @media screen and (min-width: $screen-tl) {
     position: static;
     border-radius: 24px;
+  }
+
+  &__skeleton {
+    &--active {
+      pointer-events: none;
+
+      #{$block-name}__button {
+        position: relative;
+
+        &::before {
+          @include background-gradient(var(--grey-200), var(--skeleton-color));
+
+          position: absolute;
+          top: -1px;
+          left: 0;
+          width: 100%;
+          height: calc(100% + 1px);
+          border-radius: 8px;
+          animation: skeleton 2s infinite linear;
+          content: "";
+        }
+      }
+    }
   }
 
   &__button {
